@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"] # Đảm bảo nhánh chính của bạn tên là main
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -19,16 +19,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 # Dùng v4 là chuẩn nhất hiện nay
+        uses: actions/checkout@v4
         with:
-          submodules: recursive # Tự động tải theme về
+          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.147.0'    # pinned to theme's HUGO_VERSION
-          extended: true # Bắt buộc phải là true để dùng cho theme Kawaii
+          hugo-version: '0.147.0'
+          extended: true
 
       - name: Diagnostics — Hugo version & repo
         run: |
@@ -41,8 +41,7 @@ jobs:
           ls -la content || true
 
       - name: Build
-          run: hugo
-
+        run: hugo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
