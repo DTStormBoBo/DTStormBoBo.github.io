@@ -5,18 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     
-    {{/* ...existing code... */}}
-    {{/* Try to load local asset via resource pipeline; if missing or not usable, fall back to CDN */}}
-    {{ with resources.Get "css/kawaii.css" }}
-        {{ $style := . }}
-        {{/* Only attempt Minify if Minify is available; guard to avoid build error on non-extended Hugo */}}
-        {{ if (hasFunc "resources.Minify") }}
-            {{ $style = $style | resources.Minify }}
-        {{ end }}
-        <link rel="stylesheet" href="{{ $style.Permalink }}">
-    {{ else }}
-        <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
-    {{ end }}
+    {{ $style := resources.Get "css/kawaii.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
