@@ -22,24 +22,16 @@ enableEmoji = true
   hero_cta = "Explore Demo"
   hero_cta_link = "/posts"
   
-  footer_description = "Demonstrating the power and beauty of the Kawaii theme"
+  footer_description = "Nỗ lực tạo ra những giải pháp phần mềm tinh tế và hiệu quả "
   copyright = "Demo site for Kawaii theme."
   
   [[params.social]]
     name = "github"
-    url = "https://github.com/yuis-ice/hugo-kawaii"
-  
-  [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/yuis_ice"
-  
-  [[params.footer_links]]
-    name = "Documentation"
-    url = "https://github.com/yuis-ice/hugo-kawaii#readme"
-  
+    url = "https://github.com/DTStormBoBo/DTStormBoBo.github.io"
+
   [[params.footer_links]]
     name = "Download"
-    url = "https://github.com/yuis-ice/hugo-kawaii"
+    url = "https://github.com/DTStormBoBo/DTStormBoBo.github.io"
   
   [[params.featured_sections]]
     title = "Beautiful Design"
@@ -51,7 +43,7 @@ enableEmoji = true
     title = "Developer Friendly"
     description = "Built with Hugo, easy to customize and extend for your needs"
     icon = "⚡"
-    link = "https://github.com/yuis-ice/hugo-kawaii#readme"
+    link = "https://github.com/DTStormBoBo/DTStormBoBo.github.io#readme"
   
   [[params.featured_sections]]
     title = "Mobile First"

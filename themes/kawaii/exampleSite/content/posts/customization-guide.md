@@ -130,11 +130,6 @@ Configure featured sections in your `hugo.toml`:
 [[params.social]]
   name = "github"
   url = "https://github.com/yourusername"
-
-[[params.social]]
-  name = "twitter"
-  url = "https://twitter.com/yourusername"
-
 [[params.social]]
   name = "linkedin"
   url = "https://linkedin.com/in/yourusername"

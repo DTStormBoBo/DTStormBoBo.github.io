@@ -23,7 +23,7 @@ Visit the [live demo](https://hugo-kawaii.pages.dev/) to see the theme in action
 
 1. **Install the theme**:
    ```bash
-   git submodule add https://github.com/yuis-ice/hugo-kawaii.git themes/kawaii
+   git submodule add https://github.com/DTStormBoBo/DTStormBoBo.github.io.git themes/kawaii
    ```
 
 2. **Update your `hugo.toml`**:
@@ -75,11 +75,6 @@ theme = "kawaii"
 [[params.social]]
   name = "github"
   url = "https://github.com/yourusername"
-
-[[params.social]]
-  name = "twitter"
-  url = "https://twitter.com/yourusername"
-```
 
 ### Navigation Menu
 
@@ -182,12 +177,12 @@ The Kawaii theme is optimized for performance:
 We welcome contributions! Here's how you can help:
 
 ### 🐛 Report Issues
-- Found a bug? [Create an issue](https://github.com/yuis-ice/hugo-kawaii/issues/new?template=bug_report.yml)
+- Found a bug? [Create an issue](https://github.com/DTStormBoBo/DTStormBoBo.github.io/issues/new?template=bug_report.yml)
 - Use our detailed bug report template for faster resolution
 
 ### ✨ Suggest Features  
-- Have an idea? [Request a feature](https://github.com/yuis-ice/hugo-kawaii/issues/new?template=feature_request.yml)
-- Join our [discussions](https://github.com/yuis-ice/hugo-kawaii/discussions) to brainstorm
+- Have an idea? [Request a feature](https://github.com/DTStormBoBo/DTStormBoBo.github.io/issues/new?template=feature_request.yml)
+- Join our [discussions](https://github.com/DTStormBoBo/DTStormBoBo.github.io/discussions) to brainstorm
 
 ### 🔧 Code Contributions
 - Fork the repository and create a feature branch
@@ -204,7 +199,7 @@ We welcome contributions! Here's how you can help:
 
 1. **Fork and clone the repository**:
    ```bash
-   git clone https://github.com/yuis-ice/hugo-kawaii.git
+   git clone https://github.com/DTStormBoBo/DTStormBoBo.github.io.git
    cd kawaii-theme
    ```
 
@@ -240,8 +235,8 @@ This theme is released under the [MIT License](LICENSE).
 ## 📞 Support
 
 - **Documentation**: Check the README and exampleSite for usage instructions
-- **Issues**: [GitHub Issues](https://github.com/yuis-ice/hugo-kawaii/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yuis-ice/hugo-kawaii/discussions)
+- **Issues**: [GitHub Issues](https://github.com/DTStormBoBo/DTStormBoBo.github.io/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/DTStormBoBo/DTStormBoBo.github.io/discussions)
 - **Community**: [Hugo Community Forum](https://discourse.gohugo.io/)
 
 ## 🚀 What's New
@@ -276,6 +271,6 @@ If you like this theme, please ⭐ star it on GitHub and share it with others!
 
 ## 🔗 Links
 
-- **Repository**: [github.com/yuis-ice/hugo-kawaii](https://github.com/yuis-ice/hugo-kawaii)
+- **Repository**: [github.com/yuis-ice/hugo-kawaii](https://github.com/DTStormBoBo/DTStormBoBo.github.io)
 - **Hugo Themes**: [themes.gohugo.io](https://themes.gohugo.io/)
 - **Hugo Documentation**: [gohugo.io/documentation](https://gohugo.io/documentation/)

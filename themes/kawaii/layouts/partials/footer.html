@@ -35,29 +35,5 @@
             </div>
         </div>
         {{ end }}
-        
-        {{ if .Site.Params.footer_links }}
-        <div class="kawaii-footer-section">
-            <h4 class="kawaii-footer-title">Quick Links</h4>
-            <div class="kawaii-footer-links">
-                {{ range .Site.Params.footer_links }}
-                <a href="{{ .url }}" class="kawaii-footer-link">{{ .name }}</a>
-                {{ end }}
-            </div>
-        </div>
-        {{ end }}
-    </div>
-    
-    <div class="kawaii-footer-bottom">
-        <div class="kawaii-footer-bottom-content">
-            <p class="kawaii-copyright">
-                © {{ now.Year }} {{ .Site.Title | default "Kawaii Theme" }}. 
-                {{ .Site.Params.copyright | default "All rights reserved." }}
-            </p>
-            <p class="kawaii-theme-credit">
-                Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
-                & <span class="kawaii-heart">💖</span> Kawaii Theme
-            </p>
-        </div>
     </div>
 </footer>
