@@ -1,6 +1,6 @@
 ---
 title: "Complete Customization Guide"
-date: 2024-01-10T09:15:00Z
+
 description: "Learn how to customize every aspect of your Kawaii theme"
 tags: ["tutorial", "customization", "hugo"]
 ---
@@ -195,7 +195,7 @@ Enhance your posts with custom front matter:
 ```yaml
 ---
 title: "Your Post Title"
-date: 2024-01-15T10:00:00Z
+
 description: "Post description"
 tags: ["tag1", "tag2"]
 featured_image: "/images/featured.jpg"

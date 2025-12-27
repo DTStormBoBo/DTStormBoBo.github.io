@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Kawaii Theme"
-date: 2024-01-15T10:00:00Z
+
 description: "Discover the beautiful features of the Kawaii Hugo theme"
 tags: ["theme", "design", "hugo"]
 featured_image: ""

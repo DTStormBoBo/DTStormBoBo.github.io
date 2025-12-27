@@ -134,7 +134,7 @@ Change typography by updating font variables:
 ```yaml
 ---
 title: "Your Post Title"
-date: 2024-01-15T10:00:00Z
+
 description: "Post description for SEO"
 tags: ["tag1", "tag2", "tag3"]
 featured_image: "/images/featured.jpg"

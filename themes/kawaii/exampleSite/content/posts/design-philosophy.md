@@ -1,6 +1,5 @@
 ---
 title: "Design Philosophy Behind Kawaii"
-date: 2024-01-12T14:30:00Z
 description: "Understanding the design principles that make Kawaii theme special"
 tags: ["design", "philosophy", "ui-ux"]
 ---
