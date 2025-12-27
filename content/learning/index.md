@@ -18,7 +18,7 @@ categories: ["Lập trình"]
 
 Giới thiệu học phần, nội dung, mục tiêu và cách học hiệu quả.
 
-👉 **[Đọc ngay →](/learning/bai1/index.html)**
+👉 **[Đọc ngay →](/learning/bai1/)**
 
 ---
 
@@ -27,7 +27,7 @@ Giới thiệu học phần, nội dung, mục tiêu và cách học hiệu qu�
 
 Mạng máy tính & Internet — các khái niệm cơ bản cần nắm.
 
-👉 **[Đọc ngay →](/learning/bai2/index.html)**
+👉 **[Đọc ngay →](/learning/bai2/)**
 
 ---
 
@@ -36,7 +36,7 @@ Mạng máy tính & Internet — các khái niệm cơ bản cần nắm.
 
 Input / Output Streams — xử lý file, console và ứng dụng mạng.
 
-👉 **[Đọc ngay →](/learning/bai3/index.html)**
+👉 **[Đọc ngay →](/learning/bai3/)**
 
 ---
 
@@ -45,7 +45,7 @@ Input / Output Streams — xử lý file, console và ứng dụng mạng.
 
 InetAddress, URL, URLConnection và DNS.
 
-👉 **[Đọc ngay →](/learning/bai4/index.html)**
+👉 **[Đọc ngay →](/learning/bai4/)**
 
 ---
 
@@ -54,7 +54,7 @@ InetAddress, URL, URLConnection và DNS.
 
 Mô hình Client–Server và Socket TCP.
 
-👉 **[Đọc ngay →](/learning/bai5/index.html)**
+👉 **[Đọc ngay →](/learning/bai5/)**
 
 ---
 
@@ -63,7 +63,7 @@ Mô hình Client–Server và Socket TCP.
 
 Giao thức UDP — nhanh, không kết nối.
 
-👉 **[Đọc ngay →](/learning/bai6/index.html)**
+👉 **[Đọc ngay →](/learning/bai6/)**
 
 ---
 
@@ -72,7 +72,7 @@ Giao thức UDP — nhanh, không kết nối.
 
 TLS/SSL, xác thực và mã hóa dữ liệu.
 
-👉 **[Đọc ngay →](/learning/bai7/index.html)**
+👉 **[Đọc ngay →](/learning/bai7/)**
 
 ---
 
@@ -81,7 +81,7 @@ TLS/SSL, xác thực và mã hóa dữ liệu.
 
 Bài tập thực tế và hướng dẫn triển khai.
 
-👉 **[Đọc ngay →](/learning/bai8/index.html)**
+👉 **[Đọc ngay →](/learning/bai8/)**
 
 ---
 
