@@ -1,0 +1,438 @@
+
+    
+    <style>
+        /* === CV PAGE STYLES === */
+        :root {
+            --cv-bg: #1a1b26;
+            --cv-card: #24283b;
+            --cv-accent: #7aa2f7; /* Màu xanh chủ đạo */
+            --cv-text-main: #c0caf5;
+            --cv-text-muted: #a9b1d8;
+        }
+
+        .kawaii-main {
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+
+        /* Container chính của CV - MAX WIDTH 1200px */
+        .cv-container {
+            max-width: 1200px;
+            width: 95%;
+            margin: 0 auto;
+            background: var(--cv-card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            color: var(--cv-text-main);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* --- HEADER SECTION --- */
+        .cv-header {
+            background: linear-gradient(135deg, rgba(36, 40, 59, 0.9), rgba(26, 27, 38, 0.95)), url('https://source.unsplash.com/1600x900/?code,technology');
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cv-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--cv-accent);
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(122, 162, 247, 0.4);
+        }
+
+        .cv-intro { flex: 1; }
+
+        .cv-intro h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .cv-intro h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--cv-accent);
+            font-size: 1.4rem;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .cv-contact-info {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            color: var(--cv-text-muted);
+        }
+
+        .cv-contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .cv-contact-info i { color: var(--cv-accent); }
+
+        /* --- BODY LAYOUT --- */
+        .cv-body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cv-left {
+            flex: 1;
+            min-width: 350px;
+            padding: 50px;
+            border-right: 1px solid rgba(255,255,255,0.05);
+            background: rgba(0,0,0,0.15);
+        }
+
+        .cv-right {
+            flex: 1.8;
+            min-width: 400px;
+            padding: 50px;
+        }
+
+        /* --- SECTIONS --- */
+        .cv-section { margin-bottom: 40px; }
+
+        .cv-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: #fff;
+            text-transform: uppercase;
+            border-left: 5px solid var(--cv-accent);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* --- SKILL BARS --- */
+        .skill-item { margin-bottom: 18px; }
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .skill-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            background: var(--cv-accent);
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(122, 162, 247, 0.5);
+        }
+
+        /* --- VIDEO DEMO SECTION --- */
+        .project-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+        
+        .project-card:hover {
+            border-color: rgba(122, 162, 247, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .video-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            background: #000;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .project-desc {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: var(--cv-text-muted);
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-tag {
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: rgba(122, 162, 247, 0.15);
+            color: var(--cv-accent);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(122, 162, 247, 0.3);
+        }
+
+        /* --- TIMELINE --- */
+        .timeline-item {
+            padding-left: 25px;
+            border-left: 2px solid rgba(255,255,255,0.1);
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--cv-accent);
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 4px;
+            box-shadow: 0 0 8px var(--cv-accent);
+        }
+        .timeline-title {
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--cv-accent);
+            margin-bottom: 8px;
+            display: block;
+            font-family: monospace;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--cv-accent);
+            color: #1a1b26;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(122, 162, 247, 0.4);
+            background: #fff;
+        }
+
+        @media (max-width: 900px) {
+            .cv-header { flex-direction: column; text-align: center; padding: 30px; }
+            .cv-body { flex-direction: column; }
+            .cv-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 30px; }
+            .cv-right { padding: 30px; }
+            .cv-intro h1 { font-size: 2.2rem; }
+            .cv-contact-info { justify-content: center; }
+        }
+    </style>
+
+
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        
+       
+        
+        <main class="kawaii-main">
+            
+            <div class="cv-container">
+                
+                <div class="cv-header">
+                    <img src="/Images/avt.png" alt="Dương Trần Bảo" class="cv-avatar">
+                    <div class="cv-intro">
+                        <h1>Dương Trần Bảo</h1>
+                        <h2>Software Engineer / Web Developer</h2>
+                        <div class="cv-contact-info">
+                            <span><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</span>
+                            <span><i class="fas fa-envelope"></i> bao.duong@example.com</span>
+                            <span><i class="fas fa-phone"></i> 09xx xxx xxx</span>
+                            <span><i class="fab fa-github"></i> github.com/baoduong</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-body">
+                    <div class="cv-left">
+                        <div class="cv-section">
+                            <h3 class="cv-section-title">Giới thiệu</h3>
+                            <p style="font-size: 1rem; line-height: 1.7;">
+                                Sinh viên năm cuối chuyên ngành Công nghệ Phần mềm. 
+                                Đam mê xây dựng các hệ thống phần mềm hiệu quả, clean code và tối ưu hóa trải nghiệm người dùng. 
+                                Có tư duy logic tốt và mong muốn phát triển trong môi trường chuyên nghiệp.
+                            </p>
+                            <a href="#" class="download-btn"><i class="fas fa-download"></i> Tải CV PDF</a>
+                        </div>
+
+                        <div class="cv-section">
+                            <h3 class="cv-section-title">Học vấn</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-title">Đại học HUTECH</div>
+                                <span class="timeline-date">2021 - Hiện tại</span>
+                                <p style="font-size: 0.9rem;">Chuyên ngành: Kỹ thuật Phần mềm (Software Engineering).</p>
+                                <p style="font-size: 0.85rem; color: #aaa; margin-top: 5px;">GPA: 3.2/4.0</p>
+                            </div>
+                        </div>
+
+                        <div class="cv-section">
+                            <h3 class="cv-section-title">Kỹ năng Chuyên môn</h3>
+                            
+                            <div class="skill-item">
+                                <div class="skill-name"><span>Java / C# (.NET)</span> <span>90%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-name"><span>HTML / CSS / JavaScript</span> <span>85%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-name"><span>SQL / Database Design</span> <span>80%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-name"><span>Git / Agile / DevOps</span> <span>75%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+                            </div>
+                        </div>
+                        
+                        <div class="cv-section">
+                            <h3 class="cv-section-title">Kỹ năng mềm</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Teamwork</span>
+                                <span class="tech-tag">Problem Solving</span>
+                                <span class="tech-tag">English (Basic)</span>
+                                <span class="tech-tag">Time Management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-right">
+                        
+                        <div class="cv-section">
+                            <h3 class="cv-section-title">Dự án Cá nhân (Demo)</h3>
+                            
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-title">Hệ thống Đặt vé & Quản lý Rạp phim</div>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">C# WinForms</span>
+                                        <span class="tech-tag">SQL Server</span>
+                                        <span class="tech-tag">Entity Framework</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="video-container">
+                                    <video controls>
+                                        <source src="/videos/DatVe.mp4" type="video/mp4">
+                                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                                    </video>
+                                </div>
+
+                                <p class="project-desc">
+                                    Phần mềm quản lý bán vé xem phim với giao diện trực quan. 
+                                    Tính năng: Chọn ghế thời gian thực, quản lý suất chiếu, báo cáo doanh thu theo ngày/tháng, phân quyền nhân viên và quản lý.
+                                </p>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-title">Website E-commerce Bán hàng</div>
+                                    <div class="tech-stack">
+                                        <span class="tech-tag">ASP.NET Core MVC</span>
+                                        <span class="tech-tag">Bootstrap</span>
+                                        <span class="tech-tag">JQuery</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="video-container">
+                                    <video controls>
+                                        <source src="/videos/Demo.mp4" type="video/mp4">
+                                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                                    </video>
+                                </div>
+
+                                <p class="project-desc">
+                                    Xây dựng website thương mại điện tử full-stack. 
+                                    Tích hợp giỏ hàng (Cart), thanh toán online (PayPal Sandbox), quản lý đơn hàng (CMS) và xác thực người dùng (Identity).
+                                </p>
+                            </div>
+                        </div>
+
+                      
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+            
+            <div class="kawaii-footer-bottom">
+                <div class="kawaii-footer-bottom-content">
+                    <p class="kawaii-copyright">© 2025 Anh Bão Mãi Đỉnh.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

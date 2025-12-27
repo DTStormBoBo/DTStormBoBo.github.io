@@ -1,0 +1,101 @@
+  baseURL = "https://DTStormBoBo.github.io/"
+  languageCode = "en-us"
+  title = "Kinh nghiệm "
+  theme = "kawaii"
+
+  enableEmoji = true
+
+  [pagination]
+    pagerSize = 6
+
+  [build]
+    writeStats = true
+
+  [params]
+    description = "A showcase of the beautiful Kawaii Hugo theme"
+    author = "yuis-ice"
+    
+    theme_toggle = true
+    search = true
+    favicon = "/favicon.ico"
+    
+    hero_cta = "Explore Demo"
+    hero_cta_link = "/posts"
+    
+    footer_description = "Demonstrating the power and beauty of the Kawaii theme"
+    copyright = "Demo site for Kawaii theme."
+    
+    [[params.social]]
+      name = "github"
+      url = "https://github.com/yuis-ice/hugo-kawaii"
+    
+    [[params.social]]
+      name = "twitter"
+      url = "https://twitter.com/yuis_ice"
+    
+    [[params.footer_links]]
+      name = "Documentation"
+      url = "https://github.com/yuis-ice/hugo-kawaii#readme"
+    
+    [[params.footer_links]]
+      name = "Download"
+      url = "https://github.com/yuis-ice/hugo-kawaii"
+    
+    [[params.featured_sections]]
+      title = "Beautiful Design"
+      description = "Experience modern web design with kawaii aesthetics and smooth animations"
+      icon = "✨"
+      link = "/posts"
+    
+    [[params.featured_sections]]
+      title = "Developer Friendly"
+      description = "Built with Hugo, easy to customize and extend for your needs"
+      icon = "⚡"
+      link = "https://github.com/yuis-ice/hugo-kawaii#readme"
+    
+    [[params.featured_sections]]
+      title = "Mobile First"
+      description = "Responsive design that looks perfect on all devices and screen sizes"
+      icon = "📱"
+
+  [menu]
+    [[menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 10
+    
+  [[menu.main]]
+      name = "Certificate"
+      url = "/certificate"
+      weight = 20
+      
+    [[menu.main]]
+      name = "About"
+      url = "/about"
+      weight = 25
+      
+    [[menu.main]]
+      name = "Contact"
+      url = "/contact"
+      weight = 30
+
+  [markup]
+    [markup.highlight]
+      style = "github"
+      lineNos = true
+      lineNumbersInTable = false
+      codeFences = true
+      guessSyntax = true
+    
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+
+  [outputs]
+    home = ["HTML", "RSS", "JSON"]
+    page = ["HTML"]
+    section = ["HTML", "RSS"]
+    
+  [caches]
+    [caches.images]
+      dir = ':cacheDir/images'

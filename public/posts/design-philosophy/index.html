@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Philosophy Behind Kawaii - Kinh nghiệm </title>
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Understanding the design principles that make Kawaii theme special">
+    <meta name="author" content="yuis-ice">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:1313/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Kinh nghiệm </span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/certificate" class="kawaii-nav-link ">
+                Certificate
+            </a>
+            
+            <a href="/about" class="kawaii-nav-link ">
+                About
+            </a>
+            
+            <a href="/contact" class="kawaii-nav-link ">
+                Contact
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            <button class="kawaii-search-toggle" aria-label="Toggle search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="21 21l-4.35-4.35"></path>
+                </svg>
+            </button>
+            
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+        
+        <main class="kawaii-main">
+            
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <div class="kawaii-article-meta">
+            <time class="kawaii-date" datetime="2024-01-12">
+                January 12, 2024
+            </time>
+            
+            <div class="kawaii-tags">
+                
+                <span class="kawaii-tag">#design</span>
+                
+                <span class="kawaii-tag">#philosophy</span>
+                
+                <span class="kawaii-tag">#ui-ux</span>
+                
+            </div>
+            
+        </div>
+        <h1 class="kawaii-article-title">Design Philosophy Behind Kawaii</h1>
+        
+        <p class="kawaii-article-description">Understanding the design principles that make Kawaii theme special</p>
+        
+    </header>
+    
+    <div class="kawaii-content">
+        <p>Creating the <strong>Kawaii</strong> theme wasn&rsquo;t just about making something that looks good - it was about crafting an experience that feels delightful, modern, and accessible to everyone.</p>
+<h2 id="core-principles">Core Principles</h2>
+<h3 id="1-simplicity-first">1. Simplicity First</h3>
+<p>We believe that the best designs are often the simplest ones. Kawaii embraces:</p>
+<ul>
+<li><strong>Clean layouts</strong> with plenty of whitespace</li>
+<li><strong>Minimal cognitive load</strong> for readers</li>
+<li><strong>Intuitive navigation</strong> that doesn&rsquo;t require explanation</li>
+<li><strong>Focus on content</strong> without distracting elements</li>
+</ul>
+<h3 id="2-delightful-interactions">2. Delightful Interactions</h3>
+<p>Small details make a big difference:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">/* Example: Smooth hover transitions */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">kawaii-post-card</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-4</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">var</span><span style="color:#1f2328">(</span><span style="color:#0550ae">--</span>kawaii<span style="color:#0550ae">-</span>shadow<span style="color:#0550ae">-</span>xl<span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><ul>
+<li>Micro-animations that provide feedback</li>
+<li>Smooth transitions between states</li>
+<li>Playful but purposeful effects</li>
+<li>Responsive design that feels natural</li>
+</ul>
+<h3 id="3-accessibility-matters">3. Accessibility Matters</h3>
+<p>Design should be inclusive:</p>
+<ul>
+<li>High contrast ratios for readability</li>
+<li>Keyboard navigation support</li>
+<li>Screen reader friendly markup</li>
+<li>Respect for reduced motion preferences</li>
+</ul>
+<h3 id="4-performance-by-design">4. Performance by Design</h3>
+<p>Beautiful doesn&rsquo;t have to mean slow:</p>
+<ul>
+<li>Optimized CSS with minimal overhead</li>
+<li>Efficient JavaScript interactions</li>
+<li>Lazy loading for images</li>
+<li>Clean HTML structure</li>
+</ul>
+<h2 id="color-psychology">Color Psychology</h2>
+<p>Our color palette was carefully chosen:</p>
+<ul>
+<li><strong>Primary Pink (#ff6b9d)</strong>: Warmth and creativity</li>
+<li><strong>Secondary Blue (#6b73ff)</strong>: Trust and professionalism</li>
+<li><strong>Accent Teal (#00d4aa)</strong>: Growth and harmony</li>
+<li><strong>Warning Orange (#ffa726)</strong>: Energy and attention</li>
+</ul>
+<h2 id="typography-choices">Typography Choices</h2>
+<p>We selected <strong>Inter</strong> as our primary font because:</p>
+<ul>
+<li>Excellent readability at all sizes</li>
+<li>Modern and clean appearance</li>
+<li>Great multilingual support</li>
+<li>Optimal for both print and digital</li>
+</ul>
+<p>For code, <strong>JetBrains Mono</strong> provides:</p>
+<ul>
+<li>Clear distinction between characters</li>
+<li>Reduced eye strain during long reading sessions</li>
+<li>Professional developer aesthetic</li>
+</ul>
+<h2 id="mobile-first-approach">Mobile-First Approach</h2>
+<p>With over 50% of web traffic coming from mobile devices, we designed Kawaii with mobile-first principles:</p>
+<ol>
+<li><strong>Touch targets</strong> are properly sized (minimum 44px)</li>
+<li><strong>Navigation</strong> works perfectly with thumbs</li>
+<li><strong>Content</strong> is readable without zooming</li>
+<li><strong>Performance</strong> is optimized for mobile networks</li>
+</ol>
+<h2 id="the-kawaii-factor">The &ldquo;Kawaii&rdquo; Factor</h2>
+<p>The term &ldquo;kawaii&rdquo; (可愛い) means &ldquo;cute&rdquo; or &ldquo;adorable&rdquo; in Japanese, but for us, it represents:</p>
+<ul>
+<li><strong>Attention to detail</strong> in every interaction</li>
+<li><strong>Warmth</strong> in design that makes users smile</li>
+<li><strong>Playfulness</strong> balanced with professionalism</li>
+<li><strong>Care</strong> in crafting each component</li>
+</ul>
+<h2 id="feedback-loop">Feedback Loop</h2>
+<p>Design is never finished. We continuously:</p>
+<ul>
+<li>Gather user feedback</li>
+<li>Monitor performance metrics</li>
+<li>Test with real users</li>
+<li>Iterate based on learnings</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s Next?</h2>
+<p>The design philosophy of Kawaii will continue to evolve:</p>
+<ul>
+<li>More customization options</li>
+<li>Better accessibility features</li>
+<li>Performance optimizations</li>
+<li>Community-driven improvements</li>
+</ul>
+<hr>
+<p><em>Design is not just what it looks like and feels like. Design is how it works.</em> - Steve Jobs</p>
+
+    </div>
+    
+    
+    <nav class="kawaii-post-nav">
+        
+        <a href="http://localhost:1313/posts/customization-guide/" class="kawaii-nav-prev">
+            <span class="kawaii-nav-arrow">←</span>
+            <span class="kawaii-nav-text">Complete Customization Guide</span>
+        </a>
+        
+        
+        
+        <a href="http://localhost:1313/posts/welcome-to-kawaii/" class="kawaii-nav-next">
+            <span class="kawaii-nav-text">Welcome to Kawaii Theme</span>
+            <span class="kawaii-nav-arrow">→</span>
+        </a>
+        
+    </nav>
+    
+</article>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+    <div class="kawaii-footer-content">
+        <div class="kawaii-footer-section">
+            <div class="kawaii-footer-brand">
+                <span class="kawaii-footer-logo">Kinh nghiệm </span>
+                <p class="kawaii-footer-description">
+                    Demonstrating the power and beauty of the Kawaii theme
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Connect</h4>
+            <div class="kawaii-social-links">
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    
+                </a>
+                
+                <a href="https://twitter.com/yuis_ice" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="twitter">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                    
+                </a>
+                
+            </div>
+        </div>
+        
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Quick Links</h4>
+            <div class="kawaii-footer-links">
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii#readme" class="kawaii-footer-link">Documentation</a>
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-footer-link">Download</a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="kawaii-footer-bottom">
+        <div class="kawaii-footer-bottom-content">
+            <p class="kawaii-copyright">
+                © 2025 Kinh nghiệm . 
+                Demo site for Kawaii theme.
+            </p>
+            <p class="kawaii-theme-credit">
+                Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
+                & <span class="kawaii-heart">💖</span> Kawaii Theme
+            </p>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

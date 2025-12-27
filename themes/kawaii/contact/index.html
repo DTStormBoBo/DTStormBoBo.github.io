@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Kawaii Theme Demo</title>
+    <meta name="description" content="Contact Kawaii Theme Demo — send messages or questions">
+    
+    
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Learn more about the Kawaii Hugo theme and its creators">
+    <meta name="author" content="yuis-ice">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        :root {
+            --primary: #ffb7b2;
+            --primary-dark: #ff9e99;
+            --text: #4a4a4a;
+            --bg: #ffffff;
+            --input-bg: #f9f9f9;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text); margin: 0; line-height: 1.6; }
+        .kawaii-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .kawaii-logo-text { font-weight: 700; font-size: 1.25rem; color: var(--primary-dark); }
+        .kawaii-list-title { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-dark); }
+        
+        /* --- CSS MỚI CHO FORM (Bo tròn & Bố cục) --- */
+        .kawaii-posts-grid { margin-bottom: 60px; }
+        
+        /* Card chứa form - dark translucent */
+        .kawaii-card {
+            border-radius: 24px;
+            background: rgba(0,0,0,0.55);
+            color: #ffffff;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+        }
+
+        /* ensure all text inside kawaii-card is white */
+        .kawaii-card, .kawaii-card * {
+            color: #ffffff !important;
+        }
+        /* keep links slightly highlighted */
+        .kawaii-card a { color: #ffd6d3 !important; }
+
+        /* Label */
+        .kawaii-form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .kawaii-form-label span {
+            margin-left: 8px; /* Căn chỉnh text label với độ cong của input */
+        }
+
+        /* Input & Textarea - Bo tròn mạnh */
+        .kawaii-input, .kawaii-textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 50px;
+            background-color: rgba(255,255,255,0.06);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.12);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        /* Textarea bo góc nhỏ hơn chút vì nó hình chữ nhật */
+        .kawaii-textarea {
+            border-radius: 24px;
+            resize: vertical; /* Cho phép kéo giãn chiều dọc */
+        }
+
+        /* Hiệu ứng khi bấm vào (Focus) */
+        .kawaii-input:focus, .kawaii-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: rgba(255,255,255,0.08);
+            box-shadow: 0 0 0 6px rgba(0,0,0,0.2);
+        }
+
+        /* Nút bấm - Bo tròn & Hiệu ứng Disable */
+        .kawaii-button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px; /* Bo tròn nút */
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        .kawaii-button-primary {
+            background-color: #000; /* mặc định (dark) */
+            color: white;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+        .kawaii-button-primary:hover:not(:disabled),
+        .kawaii-button-primary:focus-visible {
+            background-color: #0b6fbf; /* xanh đậm khi hover trên dark */
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(11,111,191,0.25);
+            outline: none;
+        }
+        .kawaii-button-primary:active:not(:disabled) {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(11,111,191,0.20);
+        }
+
+        /* --- Light theme overrides: khi body có class "light" ---> đảo ngược màu */ 
+        body.light .kawaii-button-primary {
+            background-color: var(--primary); /* màu chính (hồng) cho nền sáng */
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(255,183,178,0.18);
+        }
+        body.light .kawaii-button-primary:hover:not(:disabled),
+        body.light .kawaii-button-primary:focus-visible {
+            background-color: var(--primary-dark); /* hồng đậm khi hover trên light */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,158,153,0.25);
+            outline: none;
+        }
+        body.light .kawaii-button-primary:active:not(:disabled) {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(255,158,153,0.18);
+        }
+
+        /* Placeholder màu đen khi dùng theme sáng */
+        body.light .kawaii-input::placeholder,
+        body.light .kawaii-textarea::placeholder {
+            color: #000;
+            opacity: 1; /* đảm bảo hiển thị rõ */
+        }
+        /* Vendor prefixes */
+        body.light .kawaii-input::-webkit-input-placeholder,
+        body.light .kawaii-textarea::-webkit-input-placeholder { color: #000; opacity:1; }
+        body.light .kawaii-input::-moz-placeholder,
+        body.light .kawaii-textarea::-moz-placeholder { color: #000; opacity:1; }
+        body.light .kawaii-input:-ms-input-placeholder,
+        body.light .kawaii-textarea:-ms-input-placeholder { color: #000; opacity:1; }
+        body.light .kawaii-input::-ms-input-placeholder,
+        body.light .kawaii-textarea::-ms-input-placeholder { color: #000; opacity:1; }
+
+        /* Trạng thái bị vô hiệu hóa (Disabled) */
+        .kawaii-button:disabled {
+            background-color: #e0e0e0;
+            color: #a0a0a0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Bố cục Grid cho form */
+        .form-grid {
+            display: grid;
+            gap: 1.5rem; /* Tăng khoảng cách giữa các ô */
+        }
+
+        /* Bắt đầu: CSS cho layout contact bên cạnh form */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 1.5rem;
+            align-items: start;
+        }
+        .contact-info {
+            border-radius: 20px;
+            padding: 1.25rem;
+            font-size: 0.95rem;
+            /* dark translucent background with subtle blur */
+            background: rgba(0, 0, 0, 0.55);
+            color: #ffffff;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+        }
+        .contact-info h4 { margin: 0 0 0.5rem 0; color: #fff; }
+        .contact-info p { margin: 0.25rem 0; color: rgba(255,255,255,0.9); }
+        .contact-info a { color: #ffd6d3; text-decoration:none; font-weight:600; }
+        .contact-row { display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; }
+        .contact-icon {
+            width:36px; height:36px; border-radius:8px; display:inline-grid; place-items:center;
+            background: rgba(255,255,255,0.06); color:#fff; font-weight:700;
+        }
+        @media (max-width:880px){
+            .contact-layout { grid-template-columns: 1fr; }
+        }
+        /* Kết thúc: CSS cho layout contact */
+    </style>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:1313/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Kawaii Theme Demo</span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/certificate" class="kawaii-nav-link ">
+                Certificate
+            </a>
+            
+            <a href="/about" class="kawaii-nav-link ">
+                About
+            </a>
+            
+            <a href="/contact" class="kawaii-nav-link ">
+                Contact
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+         
+        <main class="kawaii-main">
+            
+<div class="kawaii-list-header">
+    <h1 class="kawaii-list-title">Contact Us</h1>
+</div>
+
+<div class="kawaii-posts-grid">
+    <!-- Đã thêm padding lớn hơn và style bo tròn trong CSS -->
+    <div class="kawaii-card" style="max-width:700px; margin:0 auto; padding: 2.5rem;">
+        <div class="contact-layout">
+            <form id="contact-form" action="https://formspree.io/f/mpqzzygd" method="POST" class="kawaii-form" novalidate>
+                <div class="form-grid">
+                    <label class="kawaii-form-label">
+                        <span>Name</span>
+                        <input class="kawaii-input" type="text" name="name" required placeholder="Your name">
+                    </label>
+
+                    <label class="kawaii-form-label">
+                        <span>Email</span>
+                        <input class="kawaii-input" type="email" name="email" required placeholder="you@example.com">
+                    </label>
+
+                    <label class="kawaii-form-label">
+                        <span>Subject</span>
+                        <input class="kawaii-input" type="text" name="subject" required placeholder="Subject (required)">
+                    </label>
+
+                    <label class="kawaii-form-label">
+                        <span>Message</span>
+                        <textarea class="kawaii-textarea" name="message" rows="6" required placeholder="Write your message..."></textarea>
+                    </label>
+
+                    <input type="hidden" name="_subject" value="New contact from website">
+                    <div id="contact-status" aria-live="polite" style="min-height:1.25rem; font-weight: 500; text-align:center;"></div>
+
+                    <div style="display:flex; gap:1rem; align-items:center; margin-top: 10px;">
+                        <button type="submit" id="submit-btn" class="kawaii-button kawaii-button-primary" style="flex: 1;">Send Message</button>
+
+                    </div>
+                </div>
+            </form>
+
+            <aside class="contact-info" aria-label="Thông tin liên hệ">
+                <h4>Thông tin liên hệ</h4>
+                <p>Nếu bạn muốn liên hệ trực tiếp, sử dụng:</p>
+                <div class="contact-row">
+                    <div class="contact-icon">G</div>
+                    <div>
+                        <div style="font-weight:600;">Gmail</div>
+                        <p><a href="mailto:duongtranbao3010@gmail.com">duongtranbao3010@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-icon">☎</div>
+                    <div>
+                        <div style="font-weight:600;">Số điện thoại</div>
+                        <p><a href="tel:+84 369308479">+84 369308479</a></p>
+                    </div>
+                </div>
+                <p style="margin-top:0.75rem;color:#666;font-size:0.9rem;"
+            </aside>
+        </div>
+    </div>
+
+        </main>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+    
+    <script>
+	(function(){
+		const form = document.getElementById('contact-form');
+		const status = document.getElementById('contact-status');
+		if (!form || !status) return;
+
+		const submitBtn = form.querySelector('[type="submit"]');
+
+		function showStatus(message, isOk) {
+			status.textContent = message;
+			status.style.color = isOk ? '#0b8a3e' : '#c53030';
+			clearTimeout(status._t);
+			status._t = setTimeout(() => {
+				status.textContent = '';
+				status.style.color = '';
+			}, 6000);
+		}
+
+		function validateFields() {
+			const fields = [
+				{ el: form.querySelector('[name="name"]'), name: 'Name' },
+				{ el: form.querySelector('[name="email"]'), name: 'Email' },
+				{ el: form.querySelector('[name="subject"]'), name: 'Subject' },
+				{ el: form.querySelector('[name="message"]'), name: 'Message' }
+			];
+			for (const f of fields) {
+				if (!f.el) continue;
+				const v = String(f.el.value || '').trim();
+				if (!v) return { ok: false, field: f.el, message: `Please fill ${f.name}.` };
+				if (f.name === 'Email') {
+					const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+					if (!re.test(v)) return { ok: false, field: f.el, message: 'Please enter a valid email.' };
+				}
+			}
+			return { ok: true };
+		}
+
+		form.addEventListener('submit', async function(e){
+			e.preventDefault();
+
+			const v = validateFields();
+			if (!v.ok) {
+				showStatus(v.message, false);
+				try { v.field.focus(); v.field.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e){}
+				return;
+			}
+
+			if (submitBtn) submitBtn.disabled = true;
+			showStatus('Sending...', true);
+			const url = form.action;
+			const data = new FormData(form);
+			try {
+				const res = await fetch(url, {
+					method: 'POST',
+					body: data,
+					headers: { 'Accept': 'application/json' }
+				});
+				if (res.ok) {
+					showStatus('Thanks! Your message has been sent.', true);
+					form.reset();
+				} else {
+					const json = await res.json().catch(()=>null);
+					const err = (json && (json.error || (json.errors && json.errors.map(e=>e.message).join(', ')))) || 'Oops — there was a problem sending your message.';
+					showStatus('Error: ' + err, false);
+				}
+			} catch (err) {
+				showStatus('Network error. Please try again later.', false);
+			} finally {
+				if (submitBtn) submitBtn.disabled = false;
+			}
+		});
+	})();
+	</script>
+</body>
+</html>
