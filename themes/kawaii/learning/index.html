@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học tập — Bài học</title>
+
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* New styles for learning page */
+        .learning-header {
+            padding: 36px 5%;
+            max-width: 1100px;
+            margin: 0 auto 10px;
+        }
+
+        .learning-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            color: var(--kawaii-text);
+            margin: 0 0 20px;
+        }
+
+        .posts-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 5% 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .post-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 180px;
+            transition: transform .18s ease, background .18s ease;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        }
+
+        .post-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .post-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+        }
+
+        .post-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            color: var(--kawaii-text);
+            margin: 0 0 10px;
+            line-height: 1.2;
+        }
+
+        .post-excerpt {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+            flex: 1;
+            margin-bottom: 14px;
+        }
+
+        .read-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--kawaii-text);
+            opacity: 0.95;
+        }
+
+        .kawaii-empty-state {
+            display: none;
+        }
+
+        /* hide existing empty state */
+        @media (max-width: 760px) {
+            .learning-title {
+                font-size: 2rem;
+                text-align: left;
+            }
+
+            .posts-grid {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+            <nav class="kawaii-nav">
+                <div class="kawaii-nav-brand">
+                    <a href="https://DTStormBoBo.github.io/" class="kawaii-logo">
+
+                        <span class="kawaii-logo-text">Kinh nghiệm </span>
+
+                    </a>
+                </div>
+
+                <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+
+                    <a href="/" class="kawaii-nav-link ">
+                        Home
+                    </a>
+
+                    <a href="/certificate" class="kawaii-nav-link ">
+                        Certificate
+                    </a>
+
+                    <a href="/about" class="kawaii-nav-link ">
+                        About
+                    </a>
+
+                    <a href="/contact" class="kawaii-nav-link ">
+                        Contact
+                    </a>
+
+                    <a href="/learning" class="kawaii-nav-link ">
+                        Learning
+                    </a>
+
+                </div>
+
+                <div class="kawaii-nav-extras">
+
+
+
+                    <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                        <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+
+                    <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                        <span class="kawaii-hamburger"></span>
+                        <span class="kawaii-hamburger"></span>
+                        <span class="kawaii-hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="kawaii-main">
+
+            <section class="posts-grid" aria-labelledby="learning-title">
+                <!-- Static 8 lesson cards -->
+                <a class="post-card" href="/learning/bai1/">
+                    <div class="post-meta">#Java</div>
+                    <h2 class="post-title">Bài 1: Tổng quan khóa học</h2>
+                    <p class="post-excerpt">Giới thiệu học phần, nội dung, mục tiêu và cách học để đạt kết quả tốt.</p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai2/">
+                    <div class="post-meta">#Network</div>
+                    <h2 class="post-title">Bài 2: Kiến thức nền tảng</h2>
+                    <p class="post-excerpt">Mạng máy tính & Internet — các khái niệm cơ bản cần nắm cho lập trình mạng.
+                    </p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai3/">
+                    <div class="post-meta">#JavaScript</div>
+                    <h2 class="post-title">Bài 3: Quản lý luồng nhập xuất trong Java</h2>
+                    <p class="post-excerpt">Tổng quan về Input/Output Streams — xử lý file, console và lập trình mạng.
+                    </p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai4/">
+                    <div class="post-meta">#Java</div>
+                    <h2 class="post-title">Bài 4: Quản lý địa chỉ kết nối mạng trong Java</h2>
+                    <p class="post-excerpt">InetAddress, URL, URLConnection và DNS — cách làm việc với địa chỉ mạng.</p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai5/">
+                    <div class="post-meta">#Network</div>
+                    <h2 class="post-title">Bài 5: Lập trình Socket TCP trong Java</h2>
+                    <p class="post-excerpt">Mô hình Client–Server và tạo Socket TCP cho giao tiếp tin cậy.</p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai6/">
+                    <div class="post-meta">#Java</div>
+                    <h2 class="post-title">Bài 6: Lập trình Socket UDP trong Java</h2>
+                    <p class="post-excerpt">Giao thức UDP và cách Java truyền dữ liệu nhanh nhưng không kết nối.</p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai7/">
+                    <div class="post-meta">#Security</div>
+                    <h2 class="post-title">Bài 7: Bảo mật cơ bản trong giao tiếp mạng</h2>
+                    <p class="post-excerpt">Các nguyên tắc bảo mật khi truyền dữ liệu: TLS/SSL, xác thực và mã hóa.</p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+
+                <a class="post-card" href="/learning/bai8/">
+                    <div class="post-meta">#Advanced</div>
+                    <h2 class="post-title">Bài 8: Thực hành & bài tập</h2>
+                    <p class="post-excerpt">Bài tập thực tế và hướng dẫn triển khai các ví dụ thực hành.</p>
+                    <span class="read-link">Đọc ngay →</span>
+                </a>
+            </section>
+
+        </main>
+
+        <script src="/js/kawaii.js"></script>
+    </div>
+</body>
+
+</html>
