@@ -10,7 +10,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <meta name="description" content="{{ .Description | default .Site.Params.description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
@@ -18,29 +18,8 @@
     {{ if .Site.Params.favicon }}
     <link rel="icon" href="{{ .Site.Params.favicon | relURL }}">
     {{ end }}
-
-    <style>
-        /* FIX LỖI BỊ KÉO GIỮA */
-        /* Khi trang có tham số fullwidth: true, container sẽ mở rộng ra */
-        .is-fullwidth-page .kawaii-container {
-            max-width: 1400px !important; /* Tăng chiều rộng tối đa */
-            width: 95% !important;
-            margin: 0 auto;
-        }
-
-        .is-fullwidth-page .kawaii-main {
-            max-width: 100% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-
-        /* Đảm bảo trang không bị tràn ngang do breakout */
-        body { 
-            overflow-x: hidden; 
-        }
-    </style>
 </head>
-<body class="kawaii-body {{ if .Params.fullwidth }}is-fullwidth-page{{ end }}">
+<body class="kawaii-body">
     <div class="kawaii-container">
         {{ partial "header.html" . }}
         
@@ -54,4 +33,3 @@
     <script src="{{ "js/kawaii.js" | relURL }}"></script>
 </body>
 </html>
-
