@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </title>
+    <link>http://localhost:1313/tags/javascript/</link>
+    <description>Recent content in JavaScript on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </description>
+    <generator>Hugo</generator>
+    <language>vihug</language>
+    <lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài 3: Quản lý luồng nhập xuất trong Java</title>
+      <link>http://localhost:1313/learning/bai3/</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/learning/bai3/</guid>
+      <description>Tổng quan về Input/Output Streams trong Java – nền tảng cho xử lý file, console và lập trình mạng.</description>
+    </item>
+    <item>
+      <title>Bài 5: Lập trình Socket TCP trong Java</title>
+      <link>http://localhost:1313/learning/bai5/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/learning/bai5/</guid>
+      <description>Giải thích mô hình Client–Server và cách lập trình Socket TCP trong Java – nền tảng cho giao tiếp mạng tin cậy.</description>
+    </item>
+    <item>
+      <title>Bài 7: Lập trình đa tuyến và xử lý đồng thời trong Java</title>
+      <link>http://localhost:1313/learning/bai7/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/learning/bai7/</guid>
+      <description>Giải thích lập trình đa tuyến và xử lý đồng thời trong Java – nền tảng cho các ứng dụng mạng nhiều client và hệ thống phân tán.</description>
+    </item>
+  </channel>
+</rss>

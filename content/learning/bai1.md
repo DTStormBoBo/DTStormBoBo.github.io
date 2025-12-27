@@ -1,11 +1,12 @@
 ﻿---
-title: "Bài 1: Tổng quan khóa học Lập trình Mạng máy tính"
-description: "Giới thiệu học phần CMP180, lộ trình 10 buổi, phương pháp học tập tích hợp AI (5N Prompting) và tư duy phản biện."
+title: "Bài 1: Tổng quan khoá học"
+date: 2025-12-15
+weight: 1
 draft: false
-date: 2025-10-23
-tags: ["Java", "Network Programming", "AI Learning", "HUTECH"]
-categories: ["Bài giảng", "Lập trình mạng"]
+tags: ["Java", "Network"]
+summary: "GIỚI THIỆU HỌC PHẦN."
 ---
+
 
 ![Banner giới thiệu Lập trình Mạng máy tính](banner-intro-network-programming.jpg)
 

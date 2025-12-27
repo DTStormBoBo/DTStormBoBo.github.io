@@ -1,31 +1,10 @@
 ﻿---
-title: "Bài 4: Quản lý địa chỉ kết nối mạng & Tối ưu I/O trong Java"
-date: 2025-12-27
+title: "Bài 4: Quản lý địa chỉ kết nối mạng trong Java"
+date: 2025-12-18
+weight: 4
 draft: false
-tags: ["Java", "Backend", "IO Stream", "Performance"]
-categories: ["Lập Trình Mạng"]
-description: "Đi sâu vào xử lý văn bản với Character Stream, tối ưu hiệu năng bằng Buffered Stream và ứng dụng xây dựng Web Crawler đơn giản."
----
-
-# LẬP TRÌNH MẠNG MÁY TÍNH  
-**Hutech - 11/2025**
-
----
-
-## KHỞI ĐỘNG ĐẦU GIỜ
-
-### Nội dung khóa học:
-1. **Buổi 1** | Tổng quan khoá học  
-2. **Buổi 2** | Kiến thức nền tảng  
-3. **Buổi 3** | Quản lý các luồng nhập xuất  
-4. **Buổi 4** | Quản lý địa chỉ kết nối mạng  
-5. **Buổi 5** | Lập trình sockets TCP  
-6. **Buổi 6** | Lập trình socket UDP  
-7. **Buổi 7** | Đa tuyến và Xử lý đồng thời  
-8. **Buổi 8** | Multi-cast UDP & Java RMI  
-9. **Buổi 9** | Báo cáo đồ án học phần  
-10. **Buổi 10** | Báo cáo đồ án học phần  
-
+tags: ["Java", "Socket", "File Transfer"]
+summary: "Tìm hiểu cách Java quản lý địa chỉ mạng thông qua InetAddress, URL, URLConnection và DNS."
 ---
 
 ## BUỔI 4: QUẢN LÝ ĐỊA CHỈ KẾT NỐI MẠNG

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Customization Guide - Kiến Thức - Kinh Nghiệm - Trải Nghiệm </title>
+    
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Learn how to customize every aspect of your Kawaii theme">
+    <meta name="author" content="yuis-ice">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:1313/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Kiến Thức - Kinh Nghiệm - Trải Nghiệm </span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/certificate" class="kawaii-nav-link ">
+                Certificate
+            </a>
+            
+            <a href="/about" class="kawaii-nav-link ">
+                About
+            </a>
+            
+            <a href="/contact" class="kawaii-nav-link ">
+                Contact
+            </a>
+            
+            <a href="/learning" class="kawaii-nav-link ">
+                Learning
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+        
+        <main class="kawaii-main">
+            
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <h1 class="kawaii-article-title">Complete Customization Guide</h1>
+        
+        <p class="kawaii-article-description">Learn how to customize every aspect of your Kawaii theme</p>
+        
+    </header>
+    
+    <div class="kawaii-content">
+        <p>The <strong>Kawaii</strong> theme is designed to be highly customizable while maintaining its beautiful aesthetics. This guide will walk you through all the ways you can make the theme truly yours.</p>
+<h2 id="configuration-options">Configuration Options</h2>
+<h3 id="basic-site-settings">Basic Site Settings</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># hugo.toml</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">baseURL</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;https://yoursite.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#1f2328">languageCode</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">title</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Your Amazing Site&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">theme</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;kawaii&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>  <span style="color:#1f2328">description</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Your site description&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span>  <span style="color:#1f2328">author</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Your Name&#34;</span>
+</span></span></code></pre></div><h3 id="theme-specific-settings">Theme-Specific Settings</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#57606a"># Enable/disable features</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#1f2328">theme_toggle</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">true</span>      <span style="color:#57606a"># Dark mode toggle</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  <span style="color:#1f2328">search</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">true</span>           <span style="color:#57606a"># Search functionality</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  <span style="color:#57606a"># Favicon</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  <span style="color:#1f2328">favicon</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;/favicon.ico&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  <span style="color:#57606a"># Hero section</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  <span style="color:#1f2328">hero_cta</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Get Started&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  <span style="color:#1f2328">hero_cta_link</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;/getting-started&#34;</span>
+</span></span></code></pre></div><h2 id="color-customization">Color Customization</h2>
+<h3 id="using-css-variables">Using CSS Variables</h3>
+<p>The easiest way to customize colors is by overriding CSS variables:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">/* assets/css/custom.css */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">:</span><span style="color:#0550ae">root</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#953800">--kawaii-primary</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#your</span><span style="color:#0550ae">-</span><span style="color:#cf222e">color</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#953800">--kawaii-secondary</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#your</span><span style="color:#0550ae">-</span><span style="color:#cf222e">color</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#953800">--kawaii-accent</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#your</span><span style="color:#0550ae">-</span><span style="color:#cf222e">color</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h3 id="common-color-overrides">Common Color Overrides</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">/* Brand colors */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#1f2328">:</span><span style="color:#0550ae">root</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#953800">--kawaii-primary</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#e91e63</span><span style="color:#1f2328">;</span>        <span style="color:#57606a">/* Pink to custom */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  <span style="color:#953800">--kawaii-secondary</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#3f51b5</span><span style="color:#1f2328">;</span>      <span style="color:#57606a">/* Blue to custom */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  <span style="color:#953800">--kawaii-accent</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#009688</span><span style="color:#1f2328">;</span>         <span style="color:#57606a">/* Teal to custom */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#57606a">/* Background colors */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#1f2328">:</span><span style="color:#0550ae">root</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  <span style="color:#953800">--kawaii-bg-primary</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#ffffff</span><span style="color:#1f2328">;</span>     <span style="color:#57606a">/* Main background */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  <span style="color:#953800">--kawaii-bg-secondary</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#f8f9fa</span><span style="color:#1f2328">;</span>   <span style="color:#57606a">/* Secondary background */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h2 id="typography-customization">Typography Customization</h2>
+<h3 id="changing-fonts">Changing Fonts</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">/* Custom fonts */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">:</span><span style="color:#0550ae">root</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#953800">--kawaii-font-family</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#39;Your Font&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#953800">--kawaii-font-mono</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#39;Your Mono Font&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">monospace</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#57606a">/* Import your fonts */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#1f2328">@</span><span style="color:#cf222e">import</span> <span style="color:#0550ae">url</span><span style="color:#0550ae">(</span><span style="color:#0a3069">&#39;https://fonts.googleapis.com/css2?family=Your+Font:wght@300;400;500;600;700&amp;display=swap&#39;</span><span style="color:#0550ae">)</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><h3 id="typography-scale">Typography Scale</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">/* Customize heading sizes */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">3</span><span style="color:#cf222e">rem</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">}</span>      <span style="color:#57606a">/* Default: 2.5rem */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#0550ae">h2</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2.25</span><span style="color:#cf222e">rem</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">}</span>   <span style="color:#57606a">/* Default: 2rem */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#0550ae">h3</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1.75</span><span style="color:#cf222e">rem</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">}</span>   <span style="color:#57606a">/* Default: 1.5rem */</span>
+</span></span></code></pre></div><h2 id="layout-customization">Layout Customization</h2>
+<h3 id="homepage-sections">Homepage Sections</h3>
+<p>Configure featured sections in your <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">[[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">.</span><span style="color:#1f2328">featured_sections</span><span style="color:#1f2328">]]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#1f2328">title</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Your Feature&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#1f2328">description</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Feature description&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#1f2328">icon</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;🚀&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#1f2328">link</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;/your-link&#34;</span>
+</span></span></code></pre></div><h3 id="navigation-menu">Navigation Menu</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">menu</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#1f2328">[[</span><span style="color:#1f2328">menu</span><span style="color:#1f2328">.</span><span style="color:#1f2328">main</span><span style="color:#1f2328">]]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#1f2328">name</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Home&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#1f2328">url</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#1f2328">weight</span> <span style="color:#1f2328">=</span> <span style="color:#0550ae">10</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  <span style="color:#1f2328">[[</span><span style="color:#1f2328">menu</span><span style="color:#1f2328">.</span><span style="color:#1f2328">main</span><span style="color:#1f2328">]]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#1f2328">name</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;Blog&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#1f2328">url</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;/blog&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    <span style="color:#1f2328">weight</span> <span style="color:#1f2328">=</span> <span style="color:#0550ae">20</span>
+</span></span></code></pre></div><h2 id="social-links">Social Links</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#1f2328">[[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">.</span><span style="color:#1f2328">social</span><span style="color:#1f2328">]]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>  <span style="color:#1f2328">name</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#1f2328">url</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;https://github.com/yourusername&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">[[</span><span style="color:#1f2328">params</span><span style="color:#1f2328">.</span><span style="color:#1f2328">social</span><span style="color:#1f2328">]]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>  <span style="color:#1f2328">name</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;linkedin&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>  <span style="color:#1f2328">url</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;https://linkedin.com/in/yourusername&#34;</span>
+</span></span></code></pre></div><h2 id="advanced-customization">Advanced Customization</h2>
+<h3 id="custom-layouts">Custom Layouts</h3>
+<p>Create custom layouts by copying theme files to your site:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># Copy and modify layouts</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>cp themes/kawaii/layouts/_default/single.html layouts/_default/
+</span></span></code></pre></div><h3 id="custom-partials">Custom Partials</h3>
+<p>Add custom functionality with partials:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">&lt;!-- layouts/partials/custom-header.html --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;my-custom-header&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#57606a">&lt;!-- Your custom content --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><h3 id="custom-css">Custom CSS</h3>
+<p>Add your own styles:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#57606a">/* assets/css/custom.css */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">my-custom-class</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  <span style="color:#57606a">/* Your styles */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#57606a">/* Override existing styles */</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#1f2328">.</span><span style="color:#1f2328">kawaii-post-card</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">8</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">32</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h3 id="custom-javascript">Custom JavaScript</h3>
+<p>Add custom functionality:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">// assets/js/custom.js
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;DOMContentLoaded&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#57606a">// Your custom JavaScript
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">});</span>
+</span></span></code></pre></div><h2 id="content-customization">Content Customization</h2>
+<h3 id="post-front-matter">Post Front Matter</h3>
+<p>Enhance your posts with custom front matter:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#24292e">---</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#0550ae">title</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Your Post Title&#34;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#0550ae">description</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Post description&#34;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#0550ae">tags</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#1f2328">[</span><span style="color:#0a3069">&#34;tag1&#34;</span><span style="color:#1f2328">,</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;tag2&#34;</span><span style="color:#1f2328">]</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#0550ae">featured_image</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;/images/featured.jpg&#34;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span><span style="color:#0550ae">author</span><span style="color:#1f2328">:</span><span style="color:#fff"> </span><span style="color:#0a3069">&#34;Author Name&#34;</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#24292e">---</span><span style="color:#fff">
+</span></span></span></code></pre></div><h3 id="custom-shortcodes">Custom Shortcodes</h3>
+<p>Create reusable content components:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">&lt;!-- layouts/shortcodes/callout.html --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;kawaii-callout kawaii-callout-{{ .Get 0 }}&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  {{ .Inner | markdownify }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><p>Use in content:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{/* callout &#34;info&#34; */}}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>This is an info callout!
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{/* /callout */}}
+</span></span></code></pre></div><h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="image-optimization">Image Optimization</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a">&lt;!-- Use Hugo&#39;s image processing --&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>{{ $image := .Page.Resources.GetMatch &#34;featured.jpg&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>{{ $processed := $image.Resize &#34;800x&#34; }}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">img</span> <span style="color:#1f2328">src</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;{{ $processed.RelPermalink }}&#34;</span> <span style="color:#1f2328">alt</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;{{ .Title }}&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><h3 id="cssjs-minification">CSS/JS Minification</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># hugo.toml</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">minify</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#1f2328">disableCSS</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#1f2328">disableJS</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#1f2328">disableHTML</span> <span style="color:#1f2328">=</span> <span style="color:#cf222e">false</span>
+</span></span></code></pre></div><h2 id="deployment-configuration">Deployment Configuration</h2>
+<h3 id="netlify">Netlify</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#57606a"># netlify.toml</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">build</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#1f2328">command</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;hugo --minify&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#1f2328">publish</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;public&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#1f2328">[</span><span style="color:#1f2328">build</span><span style="color:#1f2328">.</span><span style="color:#1f2328">environment</span><span style="color:#1f2328">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>  <span style="color:#1f2328">HUGO_VERSION</span> <span style="color:#1f2328">=</span> <span style="color:#0a3069">&#34;0.120.0&#34;</span>
+</span></span></code></pre></div><h3 id="vercel">Vercel</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  <span style="color:#0550ae">&#34;build&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#0550ae">&#34;env&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>      <span style="color:#0550ae">&#34;HUGO_VERSION&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;0.120.0&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  <span style="color:#1f2328">},</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>  <span style="color:#0550ae">&#34;scripts&#34;</span><span style="color:#1f2328">:</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>    <span style="color:#0550ae">&#34;build&#34;</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#34;hugo --minify&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><strong>CSS not loading</strong>: Check file paths and Hugo version</li>
+<li><strong>JavaScript errors</strong>: Ensure jQuery isn&rsquo;t conflicting</li>
+<li><strong>Images not displaying</strong>: Verify image paths and formats</li>
+</ol>
+<h3 id="debug-mode">Debug Mode</h3>
+<p>Enable Hugo&rsquo;s debug mode:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hugo server --debug --verbose
+</span></span></code></pre></div><h2 id="getting-help">Getting Help</h2>
+<ul>
+<li><strong>Documentation</strong>: Check the theme docs</li>
+<li><strong>GitHub Issues</strong>: Report bugs and feature requests</li>
+<li><strong>Community</strong>: Join our Discord server</li>
+<li><strong>Examples</strong>: Browse the example site code</li>
+</ul>
+<hr>
+<p><em>Remember: The best customization respects the theme&rsquo;s design principles while making it uniquely yours!</em></p>
+
+    </div>
+</article>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+    <div class="kawaii-footer-content">
+        <div class="kawaii-footer-section">
+            <div class="kawaii-footer-brand">
+                <span class="kawaii-footer-logo">Kiến Thức - Kinh Nghiệm - Trải Nghiệm </span>
+                <p class="kawaii-footer-description">
+                    Nỗ lực tạo ra những giải pháp phần mềm tinh tế và hiệu quả 
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Connect</h4>
+            <div class="kawaii-social-links">
+                
+                <a href="https://github.com/DTStormBoBo/DTStormBoBo.github.io" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

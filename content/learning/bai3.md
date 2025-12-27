@@ -1,31 +1,11 @@
 ﻿---
-title: "Bài 3: Quản lý Luồng Nhập Xuất trong Java"
-date: 2025-12-27
+title: "Bài 3: Quản lý luồng nhập xuất trong Java"
+date: 2025-12-17
+weight: 3
 draft: false
-tags: ["Java", "Backend", "IO Stream", "Performance"]
-categories: ["Lập Trình Mạng"]
-description: "Tìm hiểu cách quản lý luồng nhập xuất trong Java, bao gồm các loại luồng byte, luồng ký tự, luồng đệm, và luồng lọc dữ liệu. Thực hành với các ví dụ thực tế như quản lý sinh viên và mã hóa Caesar."
+tags: ["JavaScript", "Async"]
+summary: "Tổng quan về Input/Output Streams trong Java – nền tảng cho xử lý file, console và lập trình mạng."
 ---
-
-# Lập Trình Mạng Máy Tính  
-**Hutech - 9/2025**  
-
----
-
-## **Khởi Động Đầu Giờ**  
-### Nội dung khóa học:  
-1. **Buổi 1:** Tổng quan khóa học  
-2. **Buổi 2:** Kiến thức nền tảng  
-3. **Buổi 3:** Quản lý các luồng nhập xuất  
-4. **Buổi 4:** Quản lý địa chỉ kết nối mạng  
-5. **Buổi 5:** Lập trình sockets TCP  
-6. **Buổi 6:** Lập trình socket UDP  
-7. **Buổi 7:** Đa tuyến và xử lý đồng thời  
-8. **Buổi 8:** Multi-cast UDP & Java RMI  
-9. **Buổi 9-10:** Báo cáo đồ án học phần  
-
----
-
 ## **Buổi 3: Quản Lý Luồng Nhập Xuất**  
 
 ### **Nội dung chính:**  

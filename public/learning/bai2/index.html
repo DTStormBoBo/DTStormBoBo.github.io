@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <title>Bài 2: Kiến thức nền tảng?</title>
+</head>
+<body>
+  <h2 id="buổi-2-kiến-thức-nền-tảng">BUỔI 2: KIẾN THỨC NỀN TẢNG</h2>
+<h3 id="nội-dung-chính">NỘI DUNG CHÍNH</h3>
+<ol>
+<li><strong>Khởi động đầu giờ</strong></li>
+<li><strong>Mạng máy tính &amp; Internet</strong></li>
+<li><strong>Truyền cảm hứng</strong></li>
+<li><strong>Các ứng dụng mạng</strong></li>
+<li><strong>Ngôn ngữ Java</strong></li>
+<li><strong>Tóm tắt nội dung</strong></li>
+<li><strong>Hỏi đáp</strong></li>
+</ol>
+<hr>
+<h2 id="1-khởi-động-đầu-giờ">1. KHỞI ĐỘNG ĐẦU GIỜ</h2>
+<ul>
+<li>
+<p><strong>Câu hỏi:</strong> Internet có khoảng bao nhiêu thiết bị kết nối (End-Devices) vào năm 2022?<br>
+<strong>Trả lời:</strong> 15 tỷ thiết bị (4,66 tỷ người dùng x 3,2 thiết bị/người).</p>
+</li>
+<li>
+<p><strong>Câu hỏi:</strong> Kỷ lục tốc độ mạng lõi (Core Network) là bao nhiêu?<br>
+<strong>Trả lời:</strong> 44,8 Tbps (2020) trên 1000 km cáp quang giữa Tokyo và Osaka (NTT Japan).</p>
+</li>
+<li>
+<p><strong>Câu hỏi:</strong> Ứng dụng nào yêu cầu độ trễ thấp nhất?<br>
+<strong>Trả lời:</strong> High-frequency trading, Self-driving cars, Virtual reality, Online gaming, Medical imaging.</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-mạng-máy-tính--internet">2. MẠNG MÁY TÍNH &amp; INTERNET</h2>
+<h3 id="chuyển-mạch-gói-packet-switching">Chuyển mạch gói (Packet Switching)</h3>
+<ul>
+<li>
+<p><strong>Tại sao chuyển mạch gói thành công?</strong></p>
+<ul>
+<li>Hiệu quả: Các gói dữ liệu được định tuyến độc lập, chia sẻ mạng hiệu quả.</li>
+<li>Khả năng mở rộng: Dễ dàng đáp ứng nhiều thiết bị và lưu lượng.</li>
+<li>Linh hoạt: Dữ liệu có thể đi qua nhiều đường khác nhau và lắp ráp lại tại đích.</li>
+<li>Đa ứng dụng: Truyền tải văn bản, hình ảnh, âm thanh, video.</li>
+</ul>
+</li>
+<li>
+<p><strong>Thách thức của chuyển mạch gói:</strong></p>
+<ul>
+<li>Mất gói: Do tắc nghẽn mạng hoặc lỗi.</li>
+<li>Độ trễ: Biến đổi do xử lý gói, xếp hàng.</li>
+<li>Chất lượng dịch vụ (QoS): Khó đáp ứng các ứng dụng yêu cầu QoS khác nhau.</li>
+<li>Tắc nghẽn mạng: Khi lưu lượng vượt quá khả năng mạng.</li>
+</ul>
+</li>
+</ul>
+<h3 id="bộ-giao-thức-tcpip">Bộ giao thức TCP/IP</h3>
+<ul>
+<li>
+<p><strong>Các tầng giao thức:</strong></p>
+<ol>
+<li><strong>Application Layer (Tầng ứng dụng):</strong> HTTP, FTP, SMTP, DNS.</li>
+<li><strong>Transport Layer (Tầng giao vận):</strong> TCP (tin cậy), UDP (nhanh, không tin cậy).</li>
+<li><strong>Internet Layer (Tầng liên mạng):</strong> Định tuyến IP.</li>
+<li><strong>Network Interface Layer (Tầng giao diện mạng):</strong> Ethernet, WiFi.</li>
+</ol>
+</li>
+<li>
+<p><strong>Quá trình đóng gói dữ liệu (Encapsulation):</strong>
+<code>Data</code> → <code>Segment</code> (Transport) → <code>Packet</code> (Internet) → <code>Frame</code> (Network Interface).</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-truyền-cảm-hứng">3. TRUYỀN CẢM HỨNG</h2>
+<ul>
+<li>
+<p><strong>Câu hỏi:</strong> Công nghệ nào là nền tảng của Internet?<br>
+<strong>Trả lời:</strong> Chuyển mạch gói (Packet Switching, 1961).</p>
+</li>
+<li>
+<p><strong>Câu hỏi:</strong> Cha đẻ của World Wide Web là ai?<br>
+<strong>Trả lời:</strong> Tim Berners-Lee.</p>
+</li>
+</ul>
+<hr>
+<h2 id="4-các-ứng-dụng-mạng">4. CÁC ỨNG DỤNG MẠNG</h2>
+<h3 id="http-hypertext-transfer-protocol">HTTP (Hypertext Transfer Protocol)</h3>
+<ul>
+<li><strong>HTTP/1.0:</strong> Kết nối không duy trì (Non-persistent).</li>
+<li><strong>HTTP/1.1:</strong> Kết nối duy trì (Persistent).</li>
+<li><strong>Cookies:</strong> Quản lý phiên người dùng.</li>
+<li><strong>Web caching (Proxy server):</strong> Tăng tốc độ truy cập.</li>
+</ul>
+<h3 id="dns-domain-name-system">DNS (Domain Name System)</h3>
+<ul>
+<li><strong>Chức năng:</strong> Chuyển đổi tên miền (e.g., <code>google.com</code>) thành địa chỉ IP.</li>
+<li><strong>Cấu trúc:</strong> Root → TLD → Authoritative.</li>
+</ul>
+<h3 id="email">Email</h3>
+<ul>
+<li><strong>SMTP:</strong> Gửi thư (Push).</li>
+<li><strong>POP3/IMAP:</strong> Nhận thư (Pull).</li>
+</ul>
+<h3 id="ftp-file-transfer-protocol">FTP (File Transfer Protocol)</h3>
+<ul>
+<li><strong>Cổng 21:</strong> Điều khiển.</li>
+<li><strong>Cổng 20:</strong> Truyền dữ liệu.</li>
+</ul>
+<hr>
+<h2 id="5-ngôn-ngữ-java">5. NGÔN NGỮ JAVA</h2>
+<h3 id="tại-sao-chọn-java">Tại sao chọn Java?</h3>
+<ol>
+<li><strong>Độc lập nền tảng:</strong> &ldquo;Write Once, Run Anywhere&rdquo; nhờ JVM.</li>
+<li><strong>Thư viện mạnh mẽ:</strong> Hỗ trợ Socket, Multithreading, Security.</li>
+<li><strong>Cộng đồng lớn:</strong> Dễ dàng tìm kiếm hỗ trợ và tài liệu.</li>
+</ol>
+<h3 id="lập-trình-hướng-đối-tượng-oop">Lập trình hướng đối tượng (OOP)</h3>
+<ul>
+<li><strong>Encapsulation (Đóng gói):</strong> Bảo vệ dữ liệu bằng <code>private</code>, truy cập qua <code>getter/setter</code>.</li>
+<li><strong>Inheritance (Kế thừa):</strong> Tái sử dụng code từ lớp cha.</li>
+<li><strong>Polymorphism (Đa hình):</strong> Một hành động có thể hoạt động khác nhau trên các đối tượng khác nhau.</li>
+<li><strong>Abstraction (Trừu tượng):</strong> Ẩn chi tiết phức tạp, chỉ hiển thị tính năng cần thiết.</li>
+</ul>
+<h3 id="xử-lý-ngoại-lệ-exception-handling">Xử lý ngoại lệ (Exception Handling)</h3>
+<ul>
+<li><strong>Cách sử dụng:</strong>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#cf222e">try</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#fff">    </span>connectToServer<span style="color:#1f2328">();</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#1f2328">}</span><span style="color:#fff"> </span><span style="color:#cf222e">catch</span><span style="color:#fff"> </span><span style="color:#1f2328">(</span>IOException<span style="color:#fff"> </span>e<span style="color:#1f2328">)</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#fff">    </span>System<span style="color:#1f2328">.</span><span style="color:#1f2328">out</span><span style="color:#1f2328">.</span><span style="color:#1f2328">println</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#34;Lỗi kết nối: &#34;</span><span style="color:#fff"> </span><span style="color:#0550ae">+</span><span style="color:#fff"> </span>e<span style="color:#1f2328">.</span><span style="color:#1f2328">getMessage</span><span style="color:#1f2328">());</span><span style="color:#fff">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#1f2328">}</span><span style="color:#fff">
+</span></span></span></code></pre></div></li>
+</ul>
+<hr>
+<h2 id="6-tóm-tắt-nội-dung">6. TÓM TẮT NỘI DUNG</h2>
+<ol>
+<li><strong>Mạng máy tính:</strong>
+<ul>
+<li>Vai trò của Internet.</li>
+<li>Công nghệ chuyển mạch gói.</li>
+<li>Bộ giao thức TCP/IP.</li>
+</ul>
+</li>
+<li><strong>Các ứng dụng mạng:</strong>
+<ul>
+<li>HTTP, DNS, SMTP, FTP.</li>
+</ul>
+</li>
+<li><strong>Ngôn ngữ Java:</strong>
+<ul>
+<li>OOP và các nguyên lý cơ bản.</li>
+<li>Xử lý ngoại lệ.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="7-hỏi-đáp">7. HỎI ĐÁP</h2>
+<ul>
+<li><strong>Câu hỏi:</strong> Bạn có thắc mắc gì về nội dung bài học hôm nay?</li>
+<li><strong>Gợi ý:</strong> Hãy chuẩn bị câu hỏi cho buổi học tiếp theo.</li>
+</ul>
+<hr>
+<p><strong>Enjoy Learning!</strong></p>
+
+</body>
+</html>

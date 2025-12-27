@@ -1,15 +1,10 @@
 ﻿---
-title: "Bài 2: Kiến thức nền tảng Lập trình Mạng"
-description: "Tổng hợp kiến thức về kiến trúc Internet, bộ giao thức TCP/IP, các ứng dụng mạng cốt lõi (HTTP, DNS, Email) và ôn tập Java OOP."
+title: "Bài 2: Kiến thức nền tảng?"
+date: 2025-12-16
+weight: 2
 draft: false
-date: 2025-10-30
-tags: ["Java", "TCP/IP", "Network Protocols", "OOP", "HUTECH"]
-categories: ["Bài giảng", "Lập trình mạng"]
----
-
-# LẬP TRÌNH MẠNG MÁY TÍNH  
-**HUTECH - 9/2025**
-
+tags: ["Network", "Theory"]
+summary: "MẠNG MÁY TÍNH & INTERNET."
 ---
 
 ## BUỔI 2: KIẾN THỨC NỀN TẢNG
