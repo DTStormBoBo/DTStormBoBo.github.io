@@ -1159,14 +1159,6 @@ hr::after {
   text-align: center;
 }
 
-.kawaii-article-meta {
-  margin-bottom: var(--kawaii-spacing-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--kawaii-spacing-lg);
-  flex-wrap: wrap;
-}
 
 
 .kawaii-article-title {
@@ -1211,14 +1203,6 @@ hr::after {
 .kawaii-content h3 {
   margin-top: var(--kawaii-spacing-xl);
   margin-bottom: var(--kawaii-spacing-md);
-}
-
-/* Post Navigation */
-.kawaii-post-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--kawaii-spacing-lg);
-  margin-top: var(--kawaii-spacing-3xl);
 }
 
 
@@ -1423,11 +1407,6 @@ hr::after {
   .kawaii-posts-grid-featured {
     grid-template-columns: 1fr;
   }
-  
-  .kawaii-post-nav {
-    grid-template-columns: 1fr;
-  }
-  
   .kawaii-footer-bottom-content {
     flex-direction: column;
     text-align: center;
