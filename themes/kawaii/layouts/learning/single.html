@@ -241,15 +241,7 @@
 
         <main class="kawaii-main">
             <article class="learning-content">
-                <header class="learning-header">
-                    <h1 class="learning-title">{{ .Title }}</h1>
-                    <div class="learning-meta">
-                        📅 {{ .Date.Format "02/01/2006" }}
-                        {{ if .Params.categories }}
-                        • 📚 {{ index .Params.categories 0 }}
-                        {{ end }}
-                    </div>
-                </header>
+
 
                 <div class="learning-body">
                     {{ .Content }}

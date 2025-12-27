@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lập trình mạng: Multicast UDP và Java RMI</title>
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+</head>
+<body>
+    <header>
+        <h1>Lập trình mạng: Multicast UDP và Java RMI</h1>
+        <p><strong>Tags:</strong> UDP, Multicast, RMI, Distributed Systems, Network Programming | <strong>Categories:</strong> Lập trình mạng, Java | <strong>Date:</strong> 2025-12-27</p>
+        <p>Khám phá Multicast UDP để gửi dữ liệu một-nhiều và Java RMI để gọi phương thức từ xa.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Buổi 8: Lập Trình Multicast UDP & Java RMI</h2>
+            <h3>Nội dung chính</h3>
+            <ol>
+                <li>Multicast UDP</li>
+                <li>Java RMI</li>
+                <li>Thuyết trình</li>
+                <li>Đánh giá khóa học</li>
+            </ol>
+        </section>
+        <section>
+            <h3>1. Multicast UDP</h3>
+            <h4>1.1. Tổng quan</h4>
+            <p>Multicast UDP là phương thức gửi dữ liệu từ một nguồn đến nhiều người nhận cùng một lúc (one-to-many).</p>
+            <h4>1.2. Tại sao nên dùng UDP Multicast?</h4>
+            <ol>
+                <li><strong>Hiệu suất cao:</strong> Giảm lưu lượng mạng và giảm tải cho server.</li>
+                <li><strong>Đơn giản và nhanh chóng:</strong> Giao thức "gửi và quên", không cần xác nhận.</li>
+                <li><strong>Tối ưu hóa cho streaming media:</strong> Phù hợp cho các ứng dụng video/audio streaming.</li>
+            </ol>
+            <h4>1.3. Ứng dụng thực tế</h4>
+            <ul>
+                <li>Truyền phát multimedia trực tiếp.</li>
+                <li>Chat nhóm trực tuyến.</li>
+                <li>Cập nhật phần mềm đồng loạt trong mạng nội bộ.</li>
+                <li>Game đa người chơi.</li>
+            </ul>
+            <h4>1.4. Cách thức hoạt động</h4>
+            <p><strong>Địa chỉ Multicast:</strong> Sử dụng dải địa chỉ IP lớp D (<code>224.0.0.0</code> đến <code>239.255.255.255</code>).</p>
+            <p><strong>Tham gia nhóm:</strong> Client cần đăng ký tham gia vào một địa chỉ multicast group.</p>
+            <h5>Các bước gửi gói tin (Sender):</h5>
+            <ol>
+                <li>Tạo <code>MulticastSocket</code>.</li>
+                <li>Tham gia nhóm (<code>joinGroup</code>).</li>
+                <li>Tạo <code>DatagramPacket</code> chứa dữ liệu.</li>
+                <li>Gửi gói tin (<code>socket.send()</code>).</li>
+                <li>Rời nhóm (<code>leaveGroup</code>).</li>
+            </ol>
+            <h5>Ví dụ Code (Sender):</h5>
+            <pre><code class="language-java">InetAddress group = InetAddress.getByName("224.0.0.1");
+MulticastSocket socket = new MulticastSocket();
+socket.joinGroup(group);
+byte[] msg = "Hello".getBytes();
+DatagramPacket packet = new DatagramPacket(msg, msg.length, group, 9876);
+socket.send(packet);
+socket.leaveGroup(group);</code></pre>
+            <h5>Các bước nhận gói tin (Receiver):</h5>
+            <ol>
+                <li>Tạo <code>MulticastSocket</code> lắng nghe ở port tương ứng.</li>
+                <li>Tham gia nhóm (<code>joinGroup</code>).</li>
+                <li>Tạo gói <code>DatagramPacket</code> rỗng.</li>
+                <li>Nhận gói tin (<code>socket.receive()</code>).</li>
+                <li>Rời nhóm (<code>leaveGroup</code>).</li>
+            </ol>
+            <h5>Ví dụ Code (Receiver):</h5>
+            <pre><code class="language-java">InetAddress group = InetAddress.getByName("224.0.0.1");
+MulticastSocket socket = new MulticastSocket(9876);
+socket.joinGroup(group);
+byte[] buffer = new byte[1000];
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+socket.receive(packet);
+String message = new String(packet.getData(), 0, packet.getLength());
+socket.leaveGroup(group);</code></pre>
+        </section>
+        <section>
+            <h3>2. Java RMI</h3>
+            <h4>2.1. Tổng quan</h4>
+            <p>Java RMI (Remote Method Invocation) cho phép gọi phương thức từ xa giữa các ứng dụng Java.</p>
+            <h4>2.2. Tại sao dùng Java RMI?</h4>
+            <ol>
+                <li><strong>Đơn giản và dễ sử dụng:</strong> Tích hợp sẵn trong Java.</li>
+                <li><strong>Hỗ trợ kiểu dữ liệu phức tạp:</strong> Chuyển các đối tượng qua mạng.</li>
+                <li><strong>Hiệu suất tốt:</strong> Dựa trên giao thức TCP/IP.</li>
+            </ol>
+            <h4>2.3. Các bước tạo RMI</h4>
+            <ol>
+                <li>Định nghĩa giao diện.</li>
+                <li>Phát triển đối tượng bằng cách cài đặt giao diện remote.</li>
+                <li>Phát triển chương trình client và server.</li>
+                <li>Biên dịch file Java.</li>
+                <li>Tạo stub và skeleton.</li>
+                <li>Khởi động RMI registry.</li>
+                <li>Chạy server.</li>
+                <li>Chạy client.</li>
+            </ol>
+            <h5>Ví dụ: Chương trình tính tổng hai số</h5>
+            <ul>
+                <li><strong>Bước 1:</strong> Định nghĩa giao diện.</li>
+                <li><strong>Bước 2:</strong> Cài đặt giao diện remote.</li>
+                <li><strong>Bước 3:</strong> Phát triển chương trình server.</li>
+                <li><strong>Bước 4:</strong> Phát triển chương trình client.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>3. Thuyết Trình</h3>
+            <p>Học viên trình bày các bài tập và giải pháp của mình.</p>
+        </section>
+        <section>
+            <h3>4. Đánh Giá Khóa Học</h3>
+            <p>Tổng kết và đánh giá các nội dung đã học trong khóa học.</p>
+            <p><strong>Enjoy Learning!</strong></p>
+        </section>
+    </main>
+</body>
+</html>
