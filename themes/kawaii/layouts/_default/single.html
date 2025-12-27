@@ -1,16 +1,39 @@
-{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "title" }}
+{{ .Title }} - {{ .Site.Title }}
+{{ end }}
 
 {{ define "main" }}
 <article class="kawaii-article">
+
     <header class="kawaii-article-header">
-        <h1 class="kawaii-article-title">{{ .Title }}</h1>
-        {{ if .Params.description }}
-        <p class="kawaii-article-description">{{ .Params.description }}</p>
+        <h1 class="kawaii-article-title">
+            {{ .Title }}
+        </h1>
+
+        {{ with .Summary }}
+        <p class="kawaii-article-description">
+            {{ . }}
+        </p>
         {{ end }}
+
+        <div class="kawaii-article-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "02 Jan 2006" }}
+            </time>
+
+            {{ with .Params.tags }}
+            <span class="kawaii-tags">
+                {{ range . }}
+                <span class="kawaii-tag">#{{ . }}</span>
+                {{ end }}
+            </span>
+            {{ end }}
+        </div>
     </header>
-    
+
     <div class="kawaii-content">
         {{ .Content }}
     </div>
+
 </article>
 {{ end }}
