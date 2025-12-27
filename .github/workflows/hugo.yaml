@@ -41,7 +41,8 @@ jobs:
           ls -la content || true
 
       - name: Build
-        run: hugo --minify --debug --verbose
+          run: hugo
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
