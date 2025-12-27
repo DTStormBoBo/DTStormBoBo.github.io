@@ -33,13 +33,6 @@
             <span class="kawaii-nav-text">{{ .PrevInSection.Title }}</span>
         </a>
         {{ end }}
-        
-        {{ if .NextInSection }}
-        <a href="{{ .NextInSection.Permalink }}" class="kawaii-nav-next">
-            <span class="kawaii-nav-text">{{ .NextInSection.Title }}</span>
-            <span class="kawaii-nav-arrow">→</span>
-        </a>
-        {{ end }}
     </nav>
     {{ end }}
 </article>
