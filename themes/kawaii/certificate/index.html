@@ -68,6 +68,39 @@
             padding-top: 40px; 
             min-height: 80vh;
         }
+
+        /* Add grid layout for certificates: 3 columns on desktop, 2 on tablet, 1 on mobile */
+        .kawaii-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+            align-items: start;
+        }
+
+        .kawaii-post-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .kawaii-card-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 992px) {
+            .kawaii-posts-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .kawaii-posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body class="kawaii-body">
