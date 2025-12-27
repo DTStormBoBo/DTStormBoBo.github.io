@@ -4,9 +4,6 @@
 <article class="kawaii-article">
     <header class="kawaii-article-header">
         <div class="kawaii-article-meta">
-            <time class="kawaii-date" datetime="{{ .Date.Format "2006-01-02" }}">
-                {{ .Date.Format "January 2, 2006" }}
-            </time>
             {{ if .Params.tags }}
             <div class="kawaii-tags">
                 {{ range .Params.tags }}
@@ -24,16 +21,5 @@
     <div class="kawaii-content">
         {{ .Content }}
     </div>
-    
-    {{ if or .NextInSection .PrevInSection }}
-    <nav class="kawaii-post-nav">
-        {{ if .PrevInSection }}
-        <a href="{{ .PrevInSection.Permalink }}" class="kawaii-nav-prev">
-            <span class="kawaii-nav-arrow">←</span>
-            <span class="kawaii-nav-text">{{ .PrevInSection.Title }}</span>
-        </a>
-        {{ end }}
-    </nav>
-    {{ end }}
 </article>
 {{ end }}

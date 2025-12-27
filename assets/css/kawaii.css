@@ -1168,10 +1168,6 @@ hr::after {
   flex-wrap: wrap;
 }
 
-.kawaii-date {
-  color: var(--kawaii-text-muted);
-  font-weight: 500;
-}
 
 .kawaii-article-title {
   font-size: 3rem;
