@@ -1,173 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="generator" content="Hugo 0.153.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Certificates</title>
-    
-    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <meta name="description" content="My Certificates and Achievements">
-    <meta name="author" content="User">
-    
-    <link rel="icon" href="/favicon.ico">
-    
+
     <style>
         /* Make kawaii cards dark translucent with white text */
-        .kawaii-card {
+        .kawaii-card, .kawaii-post-card {
             border-radius: 16px;
             background: rgba(0,0,0,0.55);
             color: #fff;
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255,255,255,0.06);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
-        .kawaii-card a, .kawaii-card .kawaii-card-title, .kawaii-card .kawaii-card-description, .kawaii-card .kawaii-card-text, .kawaii-card .kawaii-card-meta, .kawaii-card time {
-            color: rgba(255,255,255,0.95);
+
+        .kawaii-post-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0,0,0,0.65);
         }
         
         /* Skills List Styling */
         .kawaii-skills-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            color: #ffd6d3; /* Màu hồng nhạt cho tiêu đề skills */
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            color: #ffd6d3 !important; 
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            white-space: nowrap; /* Ngăn tiêu đề này xuống dòng */
         }
 
         .kawaii-skills-list {
-            list-style-type: disc;
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: rgba(255,255,255,0.85);
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .kawaii-skills-list li {
             margin-bottom: 4px;
+            position: relative;
+            padding-left: 15px;
         }
 
-        /* ensure all text inside kawaii-card is white */
-        .kawaii-card, .kawaii-card * {
+        .kawaii-skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ffd6d3;
+        }
+
+        /* Tùy chỉnh màu chữ */
+        .kawaii-card-text * {
             color: #ffffff !important;
         }
-        .kawaii-card a { color: #ffd6d3 !important; }
-        .kawaii-skills-title { color: #ffd6d3 !important; } /* Ghi đè lại màu tiêu đề */
+        .kawaii-card-title {
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+        .kawaii-card-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
 
-        /* Tùy chỉnh thêm khoảng cách phía trên */
         .kawaii-main {
-            padding-top: 40px; 
+            padding-top: 60px; 
+            padding-bottom: 60px;
             min-height: 80vh;
         }
 
-        /* Add grid layout for certificates: 3 columns on desktop, 2 on tablet, 1 on mobile */
+        /* Layout Grid: 2 cột cho màn hình lớn để đủ chỗ cho layout ngang */
         .kawaii-posts-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 28px;
-            align-items: start;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
         }
 
+        /* Card Layout Ngang (Horizontal) */
         .kawaii-post-card {
             display: flex;
-            flex-direction: column;
-            height: 100%;
+            flex-direction: row; 
+            height: auto;
+            align-items: stretch;
+        }
+
+        .kawaii-card-media {
+            flex: 0 0 40%; /* Ảnh chiếm 40% chiều ngang thẻ */
+            max-width: 280px;
+            overflow: hidden;
         }
 
         .kawaii-card-media img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không méo */
             display: block;
-            border-radius: 8px;
+            border-radius: 0; 
         }
 
-        @media (max-width: 992px) {
+        .kawaii-card-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Responsive: Quay về layout dọc trên thiết bị di động */
+        @media (max-width: 1100px) {
             .kawaii-posts-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 600px) {
-            .kawaii-posts-grid {
-                grid-template-columns: 1fr;
+            .kawaii-post-card {
+                flex-direction: column;
+            }
+            .kawaii-card-media {
+                flex: 0 0 auto;
+                max-width: 100%;
+            }
+            .kawaii-card-media img {
+                aspect-ratio: 4/3;
             }
         }
     </style>
 </head>
 <body class="kawaii-body">
     <div class="kawaii-container">
-        <header class="kawaii-header">
-            <nav class="kawaii-nav">
-                <div class="kawaii-nav-brand">
-                    <a href="http://localhost:1313/" class="kawaii-logo">
-                        <span class="kawaii-logo-text">My Profile</span>
-                    </a>
-                </div>
-                
-                <div class="kawaii-nav-menu" id="kawaii-nav-menu">
-                    <a href="/" class="kawaii-nav-link">Home</a>
-                    <a href="/certificate" class="kawaii-nav-link">Certificate</a>
-                    <a href="/about" class="kawaii-nav-link">About</a>
-                    <a href="/contact" class="kawaii-nav-link">Contact</a>
-                </div>
-                
-                <div class="kawaii-nav-extras">
-                    <button class="kawaii-theme-toggle" aria-label="Toggle theme">
-                        <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                        </svg>
-                        <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
-                    
-                    <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
-                        <span class="kawaii-hamburger"></span>
-                        <span class="kawaii-hamburger"></span>
-                        <span class="kawaii-hamburger"></span>
-                    </button>
-                </div>
-            </nav>
-        </header>
-        
         <main class="kawaii-main">
             
-            <section class="kawaii-recent-posts kawaii-certificates" aria-labelledby="certificates-title">
-                <div class="kawaii-section-header">
+            <section class="kawaii-recent-posts" aria-labelledby="certificates-title">
+                <div class="kawaii-section-header" style="text-align: center; margin-bottom: 40px;">
                     <h2 id="certificates-title" class="kawaii-section-title">Chứng chỉ & Thành tích</h2>                   
                 </div>
 
-                <div class="kawaii-posts-grid kawaii-posts-grid-featured">
+                <div class="kawaii-posts-grid">
                     
                     <article class="kawaii-post-card">
                         <div class="kawaii-card-media">
                             <a href="/Images/JavaScriptEssentials1.jpg" target="_blank" rel="noopener">
-                                <img src="/Images/JavaScriptEssentials1.jpg" alt="JavaScript Essentials 1 Certificate" style="width:100%;height:auto;border-radius:8px;">
+                                <img src="/Images/JavaScriptEssentials1.jpg" alt="JavaScript Essentials 1 Certificate">
                             </a>
                         </div>
                         <div class="kawaii-card-content">
                             <div class="kawaii-card-text">
                                 <h3 class="kawaii-card-title">JavaScript Essentials 1</h3>
-                                <p class="kawaii-card-description">Issuer: Cisco Networking Academy & OpenEDG</p>
+                                <p class="kawaii-card-description">Issuer: Cisco & OpenEDG</p>
                                 
                                 <div class="kawaii-skills-container">
                                     <h4 class="kawaii-skills-title">Kỹ năng đạt được:</h4>
                                     <ul class="kawaii-skills-list">
-                                        <li>Hiểu cú pháp cốt lõi và hệ thống kiểu dữ liệu của JavaScript.</li>
-                                        <li>Tư duy thuật toán để giải quyết vấn đề và sử dụng luồng điều khiển.</li>
-                                        <li>Thiết kế, phát triển và cải thiện các chương trình JS đơn giản.</li>
-                                        <li>Xử lý các ngoại lệ (exceptions) cơ bản trong lập trình.</li>
+                                        <li>Cú pháp cốt lõi và kiểu dữ liệu JS.</li>
+                                        <li>Tư duy thuật toán và luồng điều khiển.</li>
+                                        <li>Phát triển chương trình JS cơ bản.</li>
+                                        <li>Xử lý ngoại lệ trong lập trình.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -177,21 +168,21 @@
                     <article class="kawaii-post-card">
                         <div class="kawaii-card-media">
                             <a href="/Images/JavaScriptEssentials2.jpg" target="_blank" rel="noopener">
-                                <img src="/Images/JavaScriptEssentials2.jpg" alt="JavaScript Essentials 2 Certificate" style="width:100%;height:auto;border-radius:8px;">
+                                <img src="/Images/JavaScriptEssentials2.jpg" alt="JavaScript Essentials 2 Certificate">
                             </a>
                         </div>
                         <div class="kawaii-card-content">
                             <div class="kawaii-card-text">
                                 <h3 class="kawaii-card-title">JavaScript Essentials 2</h3>
-                                <p class="kawaii-card-description">Issuer: Cisco Networking Academy & OpenEDG</p>
+                                <p class="kawaii-card-description">Issuer: Cisco & OpenEDG</p>
                                 
                                 <div class="kawaii-skills-container">
                                     <h4 class="kawaii-skills-title">Kỹ năng đạt được:</h4>
                                     <ul class="kawaii-skills-list">
-                                        <li>Kỹ thuật tạo và sửa đổi đối tượng (Object), Prototypes và kế thừa.</li>
-                                        <li>Sử dụng đối tượng Math và biểu thức chính quy (Regex).</li>
-                                        <li>Kỹ thuật hàm nâng cao và lập trình bất đồng bộ (Asynchronous).</li>
-                                        <li>Phát triển chương trình hướng đối tượng (OOP).</li>
+                                        <li>Đối tượng, Prototypes và kế thừa.</li>
+                                        <li>Math objects và Regular Expressions.</li>
+                                        <li>Lập trình bất đồng bộ (Async).</li>
+                                        <li>Lập trình hướng đối tượng (OOP).</li>
                                     </ul>
                                 </div>
                             </div>
@@ -201,21 +192,21 @@
                     <article class="kawaii-post-card">
                         <div class="kawaii-card-media">
                             <a href="/Images/NetworkingBasics.jpg" target="_blank" rel="noopener">
-                                <img src="/Images/NetworkingBasics.jpg" alt="Networking Basics Certificate" style="width:100%;height:auto;border-radius:8px;">
+                                <img src="/Images/NetworkingBasics.jpg" alt="Networking Basics Certificate">
                             </a>
                         </div>
                         <div class="kawaii-card-content">
                             <div class="kawaii-card-text">
                                 <h3 class="kawaii-card-title">Networking Basics</h3>
-                                <p class="kawaii-card-description">Issuer: Cisco Networking Academy</p>
+                                <p class="kawaii-card-description">Issuer: Cisco Academy</p>
                                 
                                 <div class="kawaii-skills-container">
                                     <h4 class="kawaii-skills-title">Kỹ năng đạt được:</h4>
                                     <ul class="kawaii-skills-list">
-                                        <li>Giải thích các khái niệm, chuẩn và giao thức truyền thông mạng.</li>
-                                        <li>Hiểu về địa chỉ IP (IPv4 & IPv6) và giao tiếp Ethernet.</li>
-                                        <li>Cấu hình router không dây tích hợp và bảo mật cơ bản.</li>
-                                        <li>Sử dụng công cụ để kiểm tra và khắc phục sự cố kết nối mạng.</li>
+                                        <li>Giao thức truyền thông mạng.</li>
+                                        <li>Địa chỉ IP (IPv4 & IPv6).</li>
+                                        <li>Cấu hình router và bảo mật cơ bản.</li>
+                                        <li>Khắc phục sự cố kết nối mạng.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -226,44 +217,5 @@
             </section>
 
         </main>
-        
-        <footer class="kawaii-footer">
-            <div class="kawaii-footer-content">
-                <div class="kawaii-footer-section">
-                    <div class="kawaii-footer-brand">
-                        <span class="kawaii-footer-logo">My Profile</span>
-                        <p class="kawaii-footer-description">
-                            Portfolio cá nhân
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="kawaii-footer-section">
-                    <h4 class="kawaii-footer-title">Connect</h4>
-                    <div class="kawaii-social-links">
-                        <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="kawaii-footer-bottom">
-                <div class="kawaii-footer-bottom-content">
-                    <p class="kawaii-copyright">
-                        © 2025 My Profile. 
-                    </p>
-                    <p class="kawaii-theme-credit">
-                        Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
-                        & <span class="kawaii-heart">💖</span> Kawaii Theme
-                    </p>
-                </div>
-            </div>
-        </footer>
     </div>
-    
-    <script src="/js/kawaii.js"></script>
 </body>
-</html>
