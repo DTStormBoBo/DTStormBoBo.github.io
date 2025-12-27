@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} — Lập trình Mạng</title>
+
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Learning Content Styles */
+        .learning-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 5%;
+        }
+
+        .learning-header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+
+        .learning-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--kawaii-text);
+            margin: 0 0 10px;
+            line-height: 1.2;
+        }
+
+        .learning-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .learning-body {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Markdown Elements */
+        .learning-body h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--kawaii-text);
+            margin: 40px 0 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .learning-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: rgba(255,255,255,0.95);
+            margin: 30px 0 15px;
+        }
+
+        .learning-body h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            margin: 20px 0 10px;
+        }
+
+        .learning-body p {
+            margin: 15px 0;
+        }
+
+        .learning-body ul, .learning-body ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .learning-body li {
+            margin: 8px 0;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .learning-body code {
+            background: rgba(0,0,0,0.4);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: #a8d8ea;
+        }
+
+        .learning-body pre {
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .learning-body pre code {
+            background: none;
+            padding: 0;
+            color: #e0e0e0;
+        }
+
+        .learning-body blockquote {
+            border-left: 4px solid var(--kawaii-accent);
+            padding-left: 20px;
+            margin: 20px 0;
+            color: rgba(255,255,255,0.75);
+            font-style: italic;
+        }
+
+        .learning-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .learning-body hr {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin: 40px 0;
+        }
+
+        .learning-body a {
+            color: #a8d8ea;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(168,216,234,0.3);
+            transition: all .2s ease;
+        }
+
+        .learning-body a:hover {
+            color: #ffd6d3;
+            border-bottom-color: rgba(255,214,211,0.6);
+        }
+
+        .learning-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .learning-body th, .learning-body td {
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px;
+            text-align: left;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .learning-body th {
+            background: rgba(255,255,255,0.05);
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .learning-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .learning-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            color: var(--kawaii-text);
+            text-decoration: none;
+            transition: all .2s ease;
+        }
+
+        .learning-nav a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(4px);
+        }
+
+        .learning-nav .prev { margin-right: auto; }
+        .learning-nav .next { margin-left: auto; }
+
+        @media (max-width: 768px) {
+            .learning-title { font-size: 1.8rem; }
+            .learning-body h2 { font-size: 1.4rem; }
+            .learning-content { padding: 20px 5%; }
+        }
+    </style>
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+            <nav class="kawaii-nav">
+                <div class="kawaii-nav-brand">
+                    <a href="/" class="kawaii-logo">
+                        <span class="kawaii-logo-text">Kinh nghiệm</span>
+                    </a>
+                </div>
+                
+                <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+                    <a href="/" class="kawaii-nav-link">Home</a>
+                    <a href="/certificate" class="kawaii-nav-link">Certificate</a>
+                    <a href="/about" class="kawaii-nav-link">About</a>
+                    <a href="/contact" class="kawaii-nav-link">Contact</a>
+                    <a href="/learning" class="kawaii-nav-link active">Learning</a>
+                </div>
+                
+                <div class="kawaii-nav-extras">
+                    <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                        <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    
+                    <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                        <span class="kawaii-hamburger"></span>
+                        <span class="kawaii-hamburger"></span>
+                        <span class="kawaii-hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="kawaii-main">
+            <article class="learning-content">
+                <header class="learning-header">
+                    <h1 class="learning-title">{{ .Title }}</h1>
+                    <div class="learning-meta">
+                        📅 {{ .Date.Format "02/01/2006" }}
+                        {{ if .Params.categories }}
+                        • 📚 {{ index .Params.categories 0 }}
+                        {{ end }}
+                    </div>
+                </header>
+
+                <div class="learning-body">
+                    {{ .Content }}
+                </div>
+            </article>
+        </main>
+
+        <footer class="kawaii-footer">
+            <div class="kawaii-footer-content">
+                <div class="kawaii-footer-section">
+                    <div class="kawaii-footer-brand">
+                        <span class="kawaii-footer-logo">Kinh nghiệm</span>
+                        <p class="kawaii-footer-description">Nỗ lực tạo ra những giải pháp phần mềm tinh tế</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

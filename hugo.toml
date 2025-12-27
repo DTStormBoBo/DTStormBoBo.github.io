@@ -71,6 +71,11 @@
       url = "/contact"
       weight = 30
 
+    [[menu.main]]
+      name = "Learning"
+      url = "/learning"
+      weight = 35
+
   [markup]
     [markup.highlight]
       style = "github"
