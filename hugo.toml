@@ -1,6 +1,6 @@
   baseURL = "https://DTStormBoBo.github.io/"
   languageCode = "en-us"
-  title = "Kinh nghiệm "
+  title = "Kiến Thức - Kinh Nghiệm - Trại Nghiệm "
   theme = "kawaii"
 
   enableEmoji = true
@@ -12,7 +12,7 @@
     writeStats = true
 
   [params]
-    description = "A showcase of the beautiful Kawaii Hugo theme"
+    description = "Kinh Nghiệm sau 4 năm"
     author = "yuis-ice"
     
     theme_toggle = true
