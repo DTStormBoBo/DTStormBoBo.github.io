@@ -27,11 +27,21 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest' # Luôn lấy bản mới nhất
+          hugo-version: '0.147.0'    # pinned to theme's HUGO_VERSION
           extended: true # Bắt buộc phải là true để dùng cho theme Kawaii
 
+      - name: Diagnostics — Hugo version & repo
+        run: |
+          hugo version
+          echo "Listing repository root:"
+          ls -la
+          echo "Listing themes dir:"
+          ls -la themes || true
+          echo "Listing content dir:"
+          ls -la content || true
+
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --debug --verbose
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
