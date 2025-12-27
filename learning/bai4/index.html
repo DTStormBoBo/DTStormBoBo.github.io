@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Quản lý địa chỉ kết nối mạng & Tối ưu I/O trong Java</title>
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bài 4: Quản lý địa chỉ kết nối mạng & Tối ưu I/O trong Java</h1>
+        <p><strong>Tags:</strong> Java, Backend, IO Stream, Performance | <strong>Categories:</strong> Lập Trình Mạng | <strong>Date:</strong> 2025-12-27</p>
+        <p>Đi sâu vào xử lý văn bản với Character Stream, tối ưu hiệu năng bằng Buffered Stream và ứng dụng xây dựng Web Crawler đơn giản.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Buổi 4: Quản Lý Địa Chỉ Kết Nối Mạng</h2>
+            <h3>Nội dung chính:</h3>
+            <ol>
+                <li>Khởi động đầu giờ</li>
+                <li>Bài tập mẫu</li>
+                <li>Quản lý địa chỉ kết nối mạng</li>
+                <li>Bài tập tại lớp</li>
+                <li>Trắc nghiệm ôn tập</li>
+                <li>Thuyết trình</li>
+                <li>Hỏi & Đáp</li>
+            </ol>
+            <hr>
+        </section>
+        <section>
+            <h3>2. Bài Tập Mẫu</h3>
+            <h4>Ví dụ: Web Crawler</h4>
+            <p>Viết một chương trình Web Crawler đơn giản để lấy danh sách các URL từ một trang web ban đầu.</p>
+            <h5>Yêu cầu chức năng:</h5>
+            <ol>
+                <li><strong>Lập danh sách URL cần crawl:</strong>
+                    <ul>
+                        <li>Người dùng nhập địa chỉ trang web ban đầu.</li>
+                        <li>Người dùng cung cấp độ sâu tìm kiếm.</li>
+                        <li>Chương trình chạy và lập danh sách các đường link cần crawl và lưu vào file.</li>
+                    </ul>
+                </li>
+                <li><strong>Hiển thị danh sách các URL đã lấy được:</strong>
+                    <ul>
+                        <li>Chương trình cho phép người dùng chọn menu hiển thị danh sách các URL đã lấy được từ trang web ban đầu.</li>
+                    </ul>
+                </li>
+                <li>Kết thúc chương trình.</li>
+            </ol>
+            <hr>
+        </section>
+        <section>
+            <h3>3. Quản Lý Địa Chỉ Kết Nối Mạng</h3>
+            <h4>Lớp URL | Ví dụ 4.1</h4>
+            <h5>Nội dung:</h5>
+            <ul>
+                <li><strong>Thư viện:</strong> <code>import java.net.URL;</code></li>
+                <li><strong>Khởi tạo:</strong></li>
+            </ul>
+            <pre><code class="language-java">URL url = new URL("https://www.example.com");</code></pre>
+            <ul>
+                <li><strong>Thuộc tính cơ bản:</strong></li>
+            </ul>
+            <pre><code class="language-java">String protocol = url.getProtocol();
+String host = url.getHost();
+int port = url.getPort();
+String path = url.getPath();
+String query = url.getQuery();</code></pre>
+            <ul>
+                <li><strong>Cách sử dụng:</strong></li>
+            </ul>
+            <pre><code class="language-java">InputStream inputStream = url.openStream();
+BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+String line;
+while ((line = reader.readLine()) != null) {
+    // Xử lý dữ liệu
+}
+reader.close();</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h4>Giao diện Iterator | Ví dụ 4.2</h4>
+            <h5>Nội dung:</h5>
+            <ul>
+                <li><strong>Mục đích:</strong> Duyệt qua một tập hợp phần tử mà không cần biết cấu trúc bên trong.</li>
+                <li><strong>Thư viện:</strong> <code>import java.util.Iterator;</code></li>
+                <li><strong>Khai báo:</strong></li>
+            </ul>
+            <pre><code class="language-java">Iterator&lt;T&gt; iterator = collection.iterator();</code></pre>
+            <ul>
+                <li><strong>Phương thức cơ bản:</strong>
+                    <ul>
+                        <li><code>boolean hasNext()</code>: Kiểm tra xem có phần tử tiếp theo không.</li>
+                        <li><code>T next()</code>: Trả về phần tử tiếp theo.</li>
+                        <li><code>void remove()</code>: Xóa phần tử hiện tại.</li>
+                    </ul>
+                </li>
+                <li><strong>Cách sử dụng:</strong></li>
+            </ul>
+            <pre><code class="language-java">List&lt;String&gt; names = new ArrayList&lt;&gt;();
+names.add("John");
+names.add("Mary");
+names.add("Alice");
+Iterator&lt;String&gt; iterator = names.iterator();
+while (iterator.hasNext()) {
+    String name = iterator.next();
+    System.out.println(name);
+}</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h4>Lớp Matcher & Pattern | Ví dụ 4.3</h4>
+            <h5>Nội dung:</h5>
+            <ul>
+                <li><strong>Mục đích:</strong> Làm việc với dữ liệu và thực hiện các tác vụ như duyệt qua, so khớp và trích xuất thông tin từ các chuỗi.</li>
+                <li><strong>Thư viện:</strong></li>
+            </ul>
+            <pre><code class="language-java">import java.util.regex.Pattern;
+import java.util.regex.Matcher;</code></pre>
+            <ul>
+                <li><strong>Khai báo:</strong></li>
+            </ul>
+            <pre><code class="language-java">Pattern pattern = Pattern.compile("regex");
+Matcher matcher = pattern.matcher("input");</code></pre>
+            <ul>
+                <li><strong>Phương thức cơ bản:</strong>
+                    <ul>
+                        <li><code>boolean find()</code>: Tìm kiếm một phần tử khớp với regex.</li>
+                        <li><code>String group()</code>: Trả về phần tử khớp hiện tại.</li>
+                        <li><code>int start()</code>: Vị trí bắt đầu của phần tử khớp.</li>
+                        <li><code>int end()</code>: Vị trí kết thúc của phần tử khớp.</li>
+                    </ul>
+                </li>
+                <li><strong>Cách sử dụng:</strong></li>
+            </ul>
+            <pre><code class="language-java">String input = "Hello 123 Java";
+Pattern pattern = Pattern.compile("\\d+");
+Matcher matcher = pattern.matcher(input);
+while (matcher.find()) {
+    String match = matcher.group();
+    int start = matcher.start();
+    int end = matcher.end();
+    System.out.println("Match: " + match + " (Start: " + start + ", End: " + end + ")");
+}</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h4>Regular Expression (Regex)</h4>
+            <h5>Mục đích:</h5>
+            <p>Regex là một chuỗi ký tự đặc biệt được sử dụng để tìm kiếm, so khớp và xử lý các chuỗi ký tự theo một mẫu cụ thể.</p>
+            <h5>Cú pháp cơ bản:</h5>
+            <ul>
+                <li><code>.</code>: Đại diện cho bất kỳ ký tự nào.</li>
+                <li><code>[]</code>: Xác định một tập hợp các ký tự. Ví dụ <code>[aeiou]</code> tìm kiếm bất kỳ ký tự nguyên âm nào.</li>
+                <li><code>*</code>: Xác định sự xuất hiện 0 hoặc nhiều lần của một mẫu trước đó.</li>
+                <li><code>+</code>: Xác định sự xuất hiện ít nhất một lần của một mẫu trước đó.</li>
+                <li><code>?</code>: Xác định sự xuất hiện 0 hoặc 1 lần của một mẫu trước đó.</li>
+                <li><code>|</code>: Xác định sự tương đương logic "hoặc" giữa các mẫu.</li>
+            </ul>
+            <h5>Ví dụ minh họa:</h5>
+            <ul>
+                <li>Mẫu <code>a.b</code> sẽ tìm kiếm các chuỗi có chữ "a" sau đó là bất kỳ ký tự nào, và sau đó là chữ "b". Ví dụ: <code>acb</code>, <code>axb</code>, <code>azb</code>.</li>
+                <li>Mẫu <code>[0-9]+</code> sẽ tìm kiếm các chuỗi gồm ít nhất một chữ số từ 0 đến 9. Ví dụ: <code>123</code>, <code>0</code>, <code>99</code>.</li>
+                <li>Mẫu <code>[A-Za-z]+</code> sẽ tìm kiếm các chuỗi gồm ít nhất một chữ cái từ A đến Z hoặc từ a đến z. Ví dụ: <code>abc</code>, <code>Hello</code>, <code>XYZ</code>.</li>
+            </ul>
+            <hr>
+        </section>
+        <section>
+            <h4>Lớp HashSet | Ví dụ 4.4</h4>
+            <h5>Nội dung:</h5>
+            <ul>
+                <li><strong>Mục đích:</strong> Lưu trữ tập hợp các phần tử duy nhất, không trùng lặp.</li>
+                <li><strong>Cách sử dụng:</strong></li>
+            </ul>
+            <pre><code class="language-java">HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
+set.add("apple");
+set.add("banana");
+set.add("orange");
+set.add("apple"); // Phần tử trùng lặp sẽ bị loại bỏ
+System.out.println(set); // Output: [apple, orange, banana]</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h4>Lớp HashMap | Ví dụ 4.5</h4>
+            <h5>Nội dung:</h5>
+            <ul>
+                <li><strong>Mục đích:</strong> Lưu trữ và truy xuất dữ liệu dựa trên cặp khóa-giá trị.</li>
+                <li><strong>Cách sử dụng:</strong></li>
+            </ul>
+            <pre><code class="language-java">HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+map.put("apple", 10);
+map.put("banana", 5);
+map.put("orange", 8);
+map.put("apple", 12); // Cập nhật giá trị cho khóa đã tồn tại
+System.out.println(map); // Output: {apple=12, orange=8, banana=5}</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h3>4. Bài Tập Tại Lớp</h3>
+            <h4>Search Engine</h4>
+            <p>Viết một chương trình Search Engine đơn giản cho phép tìm kiếm từ khóa trên các trang web.</p>
+            <h5>Yêu cầu chức năng:</h5>
+            <ol>
+                <li>Nhập địa chỉ website ban đầu và độ sâu tìm kiếm.</li>
+                <li>Nhập từ khóa cần tìm kiếm.</li>
+                <li>Lập danh sách các đường link cần crawl từ website ban đầu theo độ sâu tìm kiếm.</li>
+                <li>Tìm kiếm từ khóa trong danh sách các đường link và lưu các đường link có chứa từ khóa tìm kiếm, số lần xuất hiện từ khóa vào một file theo thứ tự số lần xuất hiện từ khóa giảm dần.</li>
+                <li>Kết thúc chương trình.</li>
+            </ol>
+            <h5>Gợi ý:</h5>
+            <ul>
+                <li>Phát triển dựa trên phiên bản WebCrawler.</li>
+                <li>Sử dụng <code>HashMap</code> để lưu số lần từ khóa xuất hiện.</li>
+                <li>Sử dụng <code>TreeMap</code> và <code>Comparator</code> để sắp xếp các đường link theo thứ tự số lần xuất hiện từ khóa giảm dần.</li>
+            </ul>
+            <hr>
+        </section>
+        <section>
+            <h3>5. Trắc Nghiệm Ôn Tập</h3>
+            <p>...existing content...</p>
+            <hr>
+        </section>
+        <section>
+            <h3>6. Thuyết Trình</h3>
+            <p>...existing content...</p>
+            <hr>
+        </section>
+        <section>
+            <h3>7. Hỏi & Đáp</h3>
+            <p>...existing content...</p>
+            <p><strong>Enjoy Learning!</strong></p>
+        </section>
+        <!-- Thêm navigation -->
+        <nav class="lesson-nav">
+            <a href="/learning/bai3/" class="nav-prev">
+                ← Bài 3: Quản lý Luồng Nhập Xuất
+            </a>
+            <div></div>
+        </nav>
+    </main>
+</body>
+</html>

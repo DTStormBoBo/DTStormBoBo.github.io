@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lập trình Đa tuyến và Xử lý Đồng thời trong Java</title>
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+</head>
+<body>
+    <header>
+        <h1>Lập trình Đa tuyến và Xử lý Đồng thời trong Java</h1>
+        <p><strong>Tags:</strong> Multi-threading, Socket, Race Condition, Deadlock | <strong>Categories:</strong> Lập trình mạng, Java, Concurrency | <strong>Date:</strong> 2025-12-27</p>
+        <p>Khám phá lập trình đa tuyến và xử lý đồng thời trong Java, bao gồm thread, race condition, deadlock và các giải pháp đồng bộ hóa.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Buổi 7: Lập Trình Đa Tuyến & Xử Lý Đồng Thời</h2>
+            <h3>Nội dung chính</h3>
+            <ol>
+                <li>Bài tập ví dụ</li>
+                <li>Lập trình đa tuyến</li>
+                <li>Xử lý đồng thời</li>
+                <li>Thuyết trình</li>
+                <li>Hỏi & Đáp</li>
+            </ol>
+        </section>
+        <section>
+            <h3>1. Bài Tập Ví Dụ</h3>
+            <h4>Ví dụ 1: Ứng dụng Chat đa tuyến</h4>
+            <p><strong>Đề bài:</strong> Xây dựng một ứng dụng chat đa tuyến giữa nhiều client và một server. Ứng dụng cho phép nhiều client kết nối đồng thời với server và gửi tin nhắn cho nhau.</p>
+            <h5>Yêu cầu chức năng:</h5>
+            <ul>
+                <li><strong>Server:</strong>
+                    <ul>
+                        <li>Chấp nhận kết nối từ nhiều client cùng lúc.</li>
+                        <li>Hiển thị tên client trong mỗi tin nhắn gửi tới các client khác.</li>
+                        <li>Ghi log tin nhắn vào file <code>chat_log.txt</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Client:</strong>
+                    <ul>
+                        <li>Kết nối tới server qua IP và nhập tên định danh.</li>
+                        <li>Gửi và nhận tin nhắn từ các client khác.</li>
+                        <li>Thoát chương trình bằng từ khóa <code>exit</code>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h5>Cách chạy:</h5>
+            <ol>
+                <li><strong>Chia nhóm:</strong> 1 Server + (n-1) Client.</li>
+                <li><strong>Trên máy server:</strong> Chạy <code>Chat_Server3</code> và cung cấp địa chỉ IP cho các client.</li>
+                <li><strong>Trên máy client:</strong> Chạy <code>Chat_Client3</code>, nhập IP và tên để kết nối.</li>
+                <li><strong>Chat:</strong> Nhập nội dung tin nhắn.</li>
+                <li><strong>Quan sát:</strong> Kiểm tra log trên server và tin nhắn hiển thị trên client.</li>
+            </ol>
+            <h4>Ví dụ 2: Tải file đa tuyến</h4>
+            <p><strong>Đề bài:</strong> Viết chương trình tải file từ Internet sử dụng đa tuyến.</p>
+            <h5>Yêu cầu chức năng:</h5>
+            <ol>
+                <li>Tải file không đồng bộ (asynchronous) bằng <code>ExecutorService</code>.</li>
+                <li>Tải file tuần tự (synchronous) bằng vòng lặp.</li>
+                <li>Tự động tạo thư mục <code>Syn</code> và <code>Asyn</code> nếu chưa tồn tại.</li>
+            </ol>
+        </section>
+        <section>
+            <h3>2. Lập Trình Đa Tuyến</h3>
+            <h4>Khái niệm về Thread</h4>
+            <ul>
+                <li><strong>Thread:</strong> Một dòng điều khiển tuần tự bên trong chương trình.</li>
+                <li><strong>Lý do sử dụng thread:</strong>
+                    <ul>
+                        <li>Tăng hiệu suất và khả năng đáp ứng.</li>
+                        <li>Giải phóng thời gian chờ đợi.</li>
+                        <li>Phân chia tác vụ lớn thành các tác vụ nhỏ hơn.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Vòng đời của Thread</h4>
+            <ol>
+                <li><strong>NEW:</strong> Thread được tạo nhưng chưa chạy.</li>
+                <li><strong>RUNNABLE:</strong> Thread sẵn sàng hoặc đang chạy.</li>
+                <li><strong>NOT-RUNNABLE:</strong> Thread bị chặn hoặc đang chờ.</li>
+                <li><strong>TERMINATED:</strong> Thread kết thúc.</li>
+            </ol>
+        </section>
+        <section>
+            <h3>3. Xử Lý Đồng Thời</h3>
+            <h4>Race Condition (Điều kiện tranh đua)</h4>
+            <p>Xảy ra khi nhiều thread cùng truy cập tài nguyên chung mà không đồng bộ.</p>
+            <h4>Deadlock (Khóa chết)</h4>
+            <p>Hai thread chờ nhau giải phóng tài nguyên mãi mãi.</p>
+            <h4>Giải pháp đồng bộ hóa</h4>
+            <ul>
+                <li><strong><code>synchronized</code> keyword:</strong> Đảm bảo chỉ một thread truy cập tài nguyên tại một thời điểm.</li>
+                <li><strong>Atomic Variables:</strong> Biến nguyên tử giúp thực hiện các phép toán thread-safe.</li>
+                <li><strong>Locks:</strong> Sử dụng <code>ReentrantLock</code> để quản lý khóa linh hoạt.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>4. Thuyết Trình</h3>
+            <p>Học viên trình bày các bài tập và giải pháp của mình.</p>
+        </section>
+        <section>
+            <h3>5. Hỏi & Đáp</h3>
+            <p>Giải đáp các thắc mắc và thảo luận về các vấn đề trong bài học.</p>
+            <p><strong>Enjoy Learning!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

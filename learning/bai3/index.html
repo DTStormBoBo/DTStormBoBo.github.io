@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Quản lý Luồng Nhập Xuất trong Java</title>
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bài 3: Quản lý Luồng Nhập Xuất trong Java</h1>
+        <p><strong>Tags:</strong> Java, Backend, IO Stream, Performance | <strong>Categories:</strong> Lập Trình Mạng | <strong>Date:</strong> 2025-12-27</p>
+        <p>Tìm hiểu cách quản lý luồng nhập xuất trong Java, bao gồm các loại luồng byte, luồng ký tự, luồng đệm, và luồng lọc dữ liệu. Thực hành với các ví dụ thực tế như quản lý sinh viên và mã hóa Caesar.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Buổi 3: Quản Lý Luồng Nhập Xuất</h2>
+            <h3>Nội dung chính:</h3>
+            <ol>
+                <li>Bài tập mẫu</li>
+                <li>Luồng nhập xuất | Bài tập mẫu</li>
+                <li>Truyền cảm hứng</li>
+                <li>Quản lý luồng nhập xuất</li>
+                <li>Bài tập tại lớp</li>
+                <li>Thuyết trình nhóm</li>
+                <li>Hỏi & Đáp</li>
+            </ol>
+            <hr>
+        </section>
+        <section>
+            <h3>1. Bài Tập Mẫu: Quản Lý Sinh Viên</h3>
+            <p>Viết chương trình Java để quản lý danh sách sinh viên.</p>
+            <h4>Yêu cầu:</h4>
+            <ol>
+                <li>Thông tin mỗi sinh viên bao gồm:
+                    <ul>
+                        <li>Mã sinh viên</li>
+                        <li>Họ và tên</li>
+                        <li>Ngày sinh</li>
+                        <li>Điểm trung bình</li>
+                    </ul>
+                </li>
+                <li>Chương trình cho phép:
+                    <ul>
+                        <li>Nhập thông tin sinh viên từ bàn phím và lưu vào file.</li>
+                        <li>Đọc thông tin sinh viên từ file và hiển thị ra màn hình.</li>
+                        <li>Sắp xếp danh sách sinh viên theo điểm trung bình từ cao đến thấp và hiển thị danh sách đã sắp xếp.</li>
+                    </ul>
+                </li>
+            </ol>
+            <hr>
+        </section>
+        <section>
+            <h3>2. Luồng Nhập Xuất | Tổng Quan</h3>
+            <h4>Luồng Nhập Xuất là gì?</h4>
+            <ul>
+                <li>Khi đọc/ghi, dữ liệu được di chuyển thành dòng gọi là <strong>luồng</strong>.</li>
+                <li>Luồng chuyển dữ liệu từ <strong>nguồn</strong> tới <strong>đích</strong>: tập tin, thiết bị, socket, hoặc mảng.</li>
+                <li>Dữ liệu trong luồng có 2 dạng: <strong>byte</strong> và <strong>ký tự</strong>.</li>
+            </ul>
+            <h4>Phân loại luồng dữ liệu trong Java:</h4>
+            <ol>
+                <li><strong>Theo loại dữ liệu:</strong>
+                    <ul>
+                        <li><strong>Luồng byte (Byte Stream):</strong> Dữ liệu truyền dạng nhị phân.</li>
+                        <li><strong>Luồng ký tự (Character Stream):</strong> Dữ liệu Unicode.</li>
+                    </ul>
+                </li>
+                <li><strong>Theo thao tác:</strong>
+                    <ul>
+                        <li><strong>Input (đọc):</strong> <code>InputStream</code> (byte), <code>Reader</code> (ký tự).</li>
+                        <li><strong>Output (ghi):</strong> <code>OutputStream</code> (byte), <code>Writer</code> (ký tự).</li>
+                    </ul>
+                </li>
+            </ol>
+            <hr>
+        </section>
+        <section>
+            <h3>3. Luồng Byte (Byte Stream)</h3>
+            <h4>Luồng Byte Đọc (InputStream):</h4>
+            <ul>
+                <li><strong>Lớp cơ sở:</strong> <code>InputStream</code></li>
+                <li><strong>Các lớp hiện thực:</strong>
+                    <ul>
+                        <li><code>FileInputStream</code>: Đọc byte từ tập tin.</li>
+                        <li><code>ByteArrayInputStream</code>: Đọc byte từ mảng byte.</li>
+                        <li><code>PipedInputStream</code>: Đọc byte từ piped output stream.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h5>Ví dụ 3.1: Đọc dữ liệu từ file bằng <code>FileInputStream</code></h5>
+            <pre><code class="language-java">FileInputStream fis = new FileInputStream("data.txt");
+int byteData;
+while ((byteData = fis.read()) != -1) {
+    System.out.print((char) byteData); // Hiển thị ký tự
+}
+fis.close();</code></pre>
+            <h4>Luồng Byte Ghi (OutputStream):</h4>
+            <ul>
+                <li><strong>Lớp cơ sở:</strong> <code>OutputStream</code></li>
+                <li><strong>Các lớp hiện thực:</strong>
+                    <ul>
+                        <li><code>FileOutputStream</code>: Ghi byte vào tập tin.</li>
+                        <li><code>ByteArrayOutputStream</code>: Ghi byte vào mảng byte.</li>
+                        <li><code>PipedOutputStream</code>: Ghi byte vào piped input stream.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h5>Ví dụ 3.4: Ghi dữ liệu vào file bằng <code>FileOutputStream</code></h5>
+            <pre><code class="language-java">FileOutputStream fos = new FileOutputStream("output.txt");
+String data = "Hello, Java IO!";
+fos.write(data.getBytes());
+fos.close();</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h3>4. Luồng Ký Tự (Character Stream)</h3>
+            <h4>Luồng Ký Tự Đọc (Reader):</h4>
+            <ul>
+                <li><strong>Lớp cơ sở:</strong> <code>Reader</code></li>
+                <li><strong>Các lớp hiện thực:</strong>
+                    <ul>
+                        <li><code>FileReader</code>: Đọc ký tự từ tập tin.</li>
+                        <li><code>BufferedReader</code>: Đọc ký tự có vùng đệm.</li>
+                        <li><code>StringReader</code>: Đọc chuỗi ký tự.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h5>Ví dụ 3.9: Đọc file văn bản bằng <code>FileReader</code></h5>
+            <pre><code class="language-java">FileReader fr = new FileReader("data.txt");
+int charData;
+while ((charData = fr.read()) != -1) {
+    System.out.print((char) charData); // Hiển thị ký tự
+}
+fr.close();</code></pre>
+            <h4>Luồng Ký Tự Ghi (Writer):</h4>
+            <ul>
+                <li><strong>Lớp cơ sở:</strong> <code>Writer</code></li>
+                <li><strong>Các lớp hiện thực:</strong>
+                    <ul>
+                        <li><code>FileWriter</code>: Ghi ký tự vào tập tin.</li>
+                        <li><code>BufferedWriter</code>: Ghi ký tự có vùng đệm.</li>
+                        <li><code>StringWriter</code>: Ghi chuỗi ký tự.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h5>Ví dụ 3.11: Ghi dữ liệu vào file bằng <code>FileWriter</code></h5>
+            <pre><code class="language-java">FileWriter fw = new FileWriter("output.txt");
+fw.write("Xin chào, Java!");
+fw.close();</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h3>5. Luồng Đệm (Buffered Stream)</h3>
+            <h4>Lợi ích của Buffered Stream:</h4>
+            <ul>
+                <li>Tăng tốc độ đọc/ghi bằng cách sử dụng vùng đệm.</li>
+                <li>Giảm số lần truy xuất vật lý đến ổ cứng.</li>
+            </ul>
+            <h4>Các lớp hỗ trợ:</h4>
+            <ul>
+                <li><strong>Byte Stream:</strong> <code>BufferedInputStream</code>, <code>BufferedOutputStream</code></li>
+                <li><strong>Character Stream:</strong> <code>BufferedReader</code>, <code>BufferedWriter</code></li>
+            </ul>
+            <h5>Ví dụ 3.15: So sánh hiệu năng với và không có Buffered Stream</h5>
+            <pre><code class="language-java">BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("buffered.txt"));
+for (int i = 0; i < 100000; i++) {
+    bos.write(("Line " + i + "\n").getBytes());
+}
+bos.close();</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h3>6. Luồng Lọc Dữ Liệu (Filtered Stream)</h3>
+            <h4>Các lớp hỗ trợ:</h4>
+            <ul>
+                <li><code>DataInputStream</code>, <code>DataOutputStream</code>: Đọc/ghi dữ liệu kiểu nguyên thủy (int, float, boolean, ...).</li>
+            </ul>
+            <h5>Ví dụ 3.14: Ghi và đọc dữ liệu kiểu nguyên thủy</h5>
+            <pre><code class="language-java">// Ghi dữ liệu
+DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.dat"));
+dos.writeInt(42);
+dos.writeDouble(3.14);
+dos.close();
+
+// Đọc dữ liệu
+DataInputStream dis = new DataInputStream(new FileInputStream("data.dat"));
+int intValue = dis.readInt();
+double doubleValue = dis.readDouble();
+dis.close();</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h3>7. Bài Tập Tại Lớp: Mã Caesar</h3>
+            <p>Viết chương trình mã hóa chuỗi ký tự sử dụng thuật toán mã hóa Caesar.</p>
+            <h4>Gợi ý:</h4>
+            <ul>
+                <li>Dịch chuyển mỗi ký tự trong chuỗi theo một số bước (key).</li>
+                <li>Ví dụ: Với key = 3, <code>A → D</code>, <code>B → E</code>, ...</li>
+            </ul>
+            <h5>Mã hóa Caesar: Code mẫu</h5>
+            <pre><code class="language-java">public class CaesarCipher {
+    public static String encrypt(String text, int key) {
+        StringBuilder result = new StringBuilder();
+        for (char c : text.toCharArray()) {
+            if (Character.isLetter(c)) {
+                char base = Character.isLowerCase(c) ? 'a' : 'A';
+                result.append((char) ((c - base + key) % 26 + base));
+            } else {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String text = "Hello, World!";
+        int key = 3;
+        System.out.println("Encrypted: " + encrypt(text, key));
+    }
+}</code></pre>
+            <hr>
+        </section>
+        <section>
+            <h3>8. Hỏi & Đáp</h3>
+            <p>Hãy đặt câu hỏi để làm rõ các khái niệm hoặc ví dụ chưa hiểu rõ.</p>
+            <p><strong>Enjoy Learning!</strong></p>
+        </section>
+        <!-- Thêm navigation -->
+        <nav class="lesson-nav">
+            <a href="/learning/bai2/" class="nav-prev">
+                ← Bài 2: Kiến thức nền tảng
+            </a>
+            <a href="/learning/bai4/" class="nav-next">
+                Bài 4: Quản lý địa chỉ kết nối mạng →
+            </a>
+        </nav>
+    </main>
+</body>
+</html>

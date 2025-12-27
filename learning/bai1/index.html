@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Tổng quan khóa học — Lập trình Mạng</title>
+
+    <link rel="stylesheet" href="https://DTStormBoBo.github.io/css/kawaii.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Main Content Container */
+        .lesson-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 5%;
+        }
+
+        /* Header Section */
+        .lesson-header {
+            background: linear-gradient(135deg, rgba(255,182,193,0.1) 0%, rgba(173,216,230,0.1) 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .lesson-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: var(--kawaii-text);
+            margin: 0 0 15px;
+            line-height: 1.2;
+        }
+
+        .lesson-description {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            margin: 0;
+        }
+
+        .lesson-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .meta-badge {
+            display: inline-block;
+            background: rgba(255,214,211,0.2);
+            color: #ffd6d3;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin: 0 5px 0 0;
+        }
+
+        /* Banner Image */
+        .lesson-banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        /* Content Sections */
+        .lesson-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .lesson-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--kawaii-text);
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .lesson-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.95);
+            margin: 30px 0 15px;
+        }
+
+        .lesson-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: #a8d8ea;
+            margin: 20px 0 10px;
+            font-weight: 600;
+        }
+
+        /* Paragraphs & Text */
+        .lesson-content p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        .lesson-content strong {
+            color: #ffd6d3;
+            font-weight: 600;
+        }
+
+        .lesson-content em {
+            color: #a8d8ea;
+            font-style: italic;
+        }
+
+        /* Lists */
+        .lesson-content ul,
+        .lesson-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .lesson-content li {
+            margin: 10px 0;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .lesson-content li strong {
+            color: #ffd6d3;
+        }
+
+        /* Code & Highlighting */
+        .lesson-content code {
+            background: rgba(0,0,0,0.4);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: #a8d8ea;
+        }
+
+        .lesson-content pre {
+            background: rgba(0,0,0,0.6);
+            border-left: 4px solid #a8d8ea;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .lesson-content pre code {
+            background: none;
+            padding: 0;
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        /* Highlights & Notes */
+        .highlight-box {
+            background: rgba(255,182,193,0.1);
+            border-left: 4px solid #ffd6d3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box strong {
+            color: #ffd6d3;
+        }
+
+        .note-box {
+            background: rgba(173,216,230,0.1);
+            border-left: 4px solid #a8d8ea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Images */
+        .lesson-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 25px 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Links */
+        .lesson-content a {
+            color: #a8d8ea;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(168,216,234,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .lesson-content a:hover {
+            color: #ffd6d3;
+            border-bottom-color: rgba(255,214,211,0.8);
+        }
+
+        /* Navigation */
+        .lesson-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .lesson-nav a {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 20px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: var(--kawaii-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .lesson-nav a:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .lesson-nav .nav-prev {
+            text-align: left;
+        }
+
+        .lesson-nav .nav-next {
+            text-align: right;
+            justify-content: flex-end;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #a8d8ea;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-title { font-size: 2rem; }
+            .lesson-header { padding: 25px; }
+            .lesson-nav { flex-direction: column; }
+            .lesson-content h2 { font-size: 1.5rem; }
+            .lesson-banner { max-height: 200px; }
+        }
+    </style>
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+            <nav class="kawaii-nav">
+                <div class="kawaii-nav-brand">
+                    <a href="/" class="kawaii-logo">
+                        <span class="kawaii-logo-text">Kinh nghiệm</span>
+                    </a>
+                </div>
+                
+                <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+                    <a href="/" class="kawaii-nav-link">Home</a>
+                    <a href="/certificate" class="kawaii-nav-link">Certificate</a>
+                    <a href="/about" class="kawaii-nav-link">About</a>
+                    <a href="/contact" class="kawaii-nav-link">Contact</a>
+                    <a href="/learning" class="kawaii-nav-link">Learning</a>
+                </div>
+                
+                <div class="kawaii-nav-extras">
+                    <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                        <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    
+                    <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                        <span class="kawaii-hamburger"></span>
+                        <span class="kawaii-hamburger"></span>
+                        <span class="kawaii-hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="kawaii-main">
+            <div class="lesson-container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="/learning/">← Quay lại danh sách bài học</a>
+                </nav>
+
+                <!-- Header -->
+                <header class="lesson-header">
+                    <h1 class="lesson-title">Bài 1: Tổng quan khóa học Lập trình Mạng máy tính</h1>
+                    <p class="lesson-description">Giới thiệu học phần CMP180, lộ trình 10 buổi, phương pháp học tập tích hợp AI (5N Prompting) và tư duy phản biện.</p>
+                    
+                    <div class="lesson-meta">
+                        <span class="meta-item">📅 <span class="meta-badge">#2025-10-23</span></span>
+                        <span class="meta-item">📚 <span class="meta-badge">#Lập trình mạng</span></span>
+                        <span class="meta-item">🏆 <span class="meta-badge">#HUTECH</span></span>
+                    </div>
+                </header>
+
+                <!-- Content -->
+                <article class="lesson-content">
+                    <!-- Banner -->
+                    <img src="banner-intro-network-programming.jpg" alt="Banner Lập trình Mạng máy tính" class="lesson-banner">
+
+                    <h2>Giới thiệu</h2>
+                    <p>Chào mừng đến với học phần <strong>Lập trình Mạng máy tính (CMP180)</strong>.</p>
+
+                    <p><strong>Mục tiêu cốt lõi:</strong></p>
+                    <ul>
+                        <li>Thiết kế và triển khai các ứng dụng mạng từ đơn giản đến phức tạp.</li>
+                        <li>Hiểu sâu về cơ chế hoạt động bên dưới của các ứng dụng mạng.</li>
+                    </ul>
+
+                    <h2>Nội dung bài học</h2>
+
+                    <h3>1. Lộ trình học tập (10 Buổi)</h3>
+                    <p>Khóa học được chia thành các giai đoạn rõ ràng, đi từ kiến thức nền tảng đến thực hành chuyên sâu:</p>
+                    <ul>
+                        <li><strong>Buổi 1-2:</strong> Tổng quan & Kiến thức nền tảng.</li>
+                        <li><strong>Buổi 3-4:</strong> Quản lý luồng nhập xuất (I/O) & Địa chỉ mạng.</li>
+                        <li><strong>Buổi 5-6:</strong> Lập trình Socket TCP & UDP.</li>
+                        <li><strong>Buổi 7-8:</strong> Đa tuyến (Multithreading), Multicast UDP & Java RMI.</li>
+                        <li><strong>Buổi 9-10:</strong> Báo cáo đồ án học phần.</li>
+                    </ul>
+
+                    <img src="timeline-course-roadmap.jpg" alt="Sơ đồ lộ trình 10 buổi học" class="lesson-banner">
+
+                    <h3>2. Phương pháp học tập mới: AI Mentor & Tư duy phản biện</h3>
+                    <p>Điểm đặc biệt của khóa học là cách tiếp cận <em>"Học cùng AI"</em> nhưng không phụ thuộc vào AI.</p>
+
+                    <div class="note-box">
+                        <p><strong>Mô hình AI:</strong> Chuyển từ AI-Thợ (Assistant) sang <strong>AI-Thầy (Mentor)</strong>. Sử dụng AI để hỏi ngược, giải thích nguyên lý thay vì chỉ xin code.</p>
+                    </div>
+
+                    <ul>
+                        <li><strong>Hiệu ứng Dunning-Kruger:</strong> Nhận thức rõ mình đang ở đâu để kiên trì phát triển.</li>
+                        <li><strong>5 Kỹ năng tư duy phản biện (Critical Thinking):</strong> Phân tích, Đánh giá, Suy luận, Giải quyết vấn đề, Giao tiếp.</li>
+                    </ul>
+
+                    <img src="dunning-kruger-chart.jpg" alt="Biểu đồ hiệu ứng Dunning-Kruger trong học tập" class="lesson-banner">
+
+                    <h3>3. Đánh giá & Quy tắc lớp học</h3>
+                    <ul>
+                        <li><strong>Điểm số:</strong> 50% Quá trình (Chuyên cần, Check-in, Thuyết trình) + 50% Cuối kỳ (Đồ án cá nhân).</li>
+                        <li><strong>Tác phong "Đi học như Đi làm":</strong> Đúng giờ, chuyên nghiệp trong email/đặt tên file, và không chơi game trong giờ.</li>
+                    </ul>
+
+                    <h2>Mục tiêu đầu ra (KSA Model)</h2>
+                    <p>Sau khóa học, kỹ sư tương lai cần đạt được:</p>
+
+                    <ol>
+                        <li><strong>Kiến thức (Knowledge):</strong> Hiểu rõ kiến trúc mạng, giao thức và ngôn ngữ Java.</li>
+                        <li><strong>Kỹ năng (Skills):</strong> Thành thạo lập trình mạng (Java/JS), làm việc nhóm và giải quyết vấn đề.</li>
+                        <li><strong>Thái độ (Attitude):</strong> Chuyên nghiệp, chủ động.</li>
+                    </ol>
+
+                    <img src="ksa-model.jpg" alt="Mô hình KSA: Kiến thức - Kỹ năng - Thái độ" class="lesson-banner">
+
+                    <h2>Tài nguyên học tập</h2>
+                    <p>Để bắt đầu, hãy cài đặt và chuẩn bị các công cụ sau:</p>
+
+                    <ul>
+                        <li><strong>IDE:</strong> <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> hoặc Netbeans.</li>
+                        <li><strong>Sách tham khảo (Must-read):</strong>
+                            <ul>
+                                <li><em>Java Network Programming</em> (Elliotte Rusty Harold).</li>
+                                <li><em>Head First Java</em> (Kathy Sierra).</li>
+                                <li><em>Computer Networking: A Top-Down Approach</em> (Kurose & Ross).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Công cụ báo cáo:</strong> GitHub (quản lý code), Hugo/Publii (viết blog).</li>
+                    </ul>
+
+                    <h2>Ví dụ / Ghi chú: Kỹ thuật Prompt 5N</h2>
+                    <p>Để khai thác AI hiệu quả như một kỹ sư thực thụ, hãy áp dụng quy tắc <strong>5N</strong> khi đặt câu hỏi (Prompt):</p>
+
+                    <div class="highlight-box">
+                        <ol>
+                            <li><strong>Ngữ cảnh (Context):</strong> Bạn là ai? Bối cảnh là gì?</li>
+                            <li><strong>Nhập vai (Role):</strong> AI đóng vai trò gì (VD: Senior Engineer)?</li>
+                            <li><strong>Người dùng (User):</strong> Ai đọc kết quả?</li>
+                            <li><strong>Nhiệm vụ (Task):</strong> Việc cần làm cụ thể.</li>
+                            <li><strong>Nghi thức (Format):</strong> Định dạng đầu ra.</li>
+                        </ol>
+                    </div>
+
+                    <img src="photos/5n-prompt-rule.jpg" alt="Sơ đồ Quy tắc 5N trong Prompt Engineering" class="lesson-banner">
+
+                    <h2>Tài liệu tham khảo</h2>
+                    <p><em>Tham khảo chi tiết được giữ riêng trong tài liệu khóa học / syllabus.</em></p>
+                </article>
+
+                <!-- Navigation -->
+                <nav class="lesson-nav">
+                    <div></div>
+                    <a href="/learning/bai2/" class="nav-next">
+                        Bài 2: Kiến thức nền tảng →
+                    </a>
+                </nav>
+            </div>
+        </main>
+
+        <footer class="kawaii-footer">
+            <div class="kawaii-footer-content">
+                <div class="kawaii-footer-section">
+                    <div class="kawaii-footer-brand">
+                        <span class="kawaii-footer-logo">Kinh nghiệm</span>
+                        <p class="kawaii-footer-description">Nỗ lực tạo ra những giải pháp phần mềm tinh tế</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>
