@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bài Giảng on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </title>
+    <link>http://localhost:1313/categories/b%C3%A0i-gi%E1%BA%A3ng/</link>
+    <description>Recent content in Bài Giảng on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </description>
+    <generator>Hugo</generator>
+    <language>vihug</language>
+    <atom:link href="http://localhost:1313/categories/b%C3%A0i-gi%E1%BA%A3ng/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

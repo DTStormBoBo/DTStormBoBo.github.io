@@ -27,7 +27,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.147.0'
+          hugo-version: '0.124.1'
           extended: true
 
       - name: Diagnostics — Hugo version & repo

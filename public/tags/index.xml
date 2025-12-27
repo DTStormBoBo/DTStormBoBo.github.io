@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </description>
+    <generator>Hugo</generator>
+    <language>vihug</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backend</title>
+      <link>http://localhost:1313/tags/backend/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/backend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/tags/networking/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Learning</title>
+      <link>http://localhost:1313/tags/ai-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Client-Server</title>
+      <link>http://localhost:1313/tags/client-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/client-server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Customization</title>
+      <link>http://localhost:1313/tags/customization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/customization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deadlock</title>
+      <link>http://localhost:1313/tags/deadlock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/deadlock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>http://localhost:1313/tags/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Systems</title>
+      <link>http://localhost:1313/tags/distributed-systems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HUTECH</title>
+      <link>http://localhost:1313/tags/hutech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hutech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IO Stream</title>
+      <link>http://localhost:1313/tags/io-stream/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/io-stream/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Threading</title>
+      <link>http://localhost:1313/tags/multi-threading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/multi-threading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multicast</title>
+      <link>http://localhost:1313/tags/multicast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/multicast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Programming</title>
+      <link>http://localhost:1313/tags/network-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Protocols</title>
+      <link>http://localhost:1313/tags/network-protocols/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network-protocols/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OOP</title>
+      <link>http://localhost:1313/tags/oop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/oop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>http://localhost:1313/tags/performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Philosophy</title>
+      <link>http://localhost:1313/tags/philosophy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Race Condition</title>
+      <link>http://localhost:1313/tags/race-condition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/race-condition/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RMI</title>
+      <link>http://localhost:1313/tags/rmi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rmi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket</title>
+      <link>http://localhost:1313/tags/socket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/socket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP</title>
+      <link>http://localhost:1313/tags/tcp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP/IP</title>
+      <link>http://localhost:1313/tags/tcp/ip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tcp/ip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Theme</title>
+      <link>http://localhost:1313/tags/theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/theme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/tags/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UDP</title>
+      <link>http://localhost:1313/tags/udp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/udp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ui-Ux</title>
+      <link>http://localhost:1313/tags/ui-ux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ui-ux/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

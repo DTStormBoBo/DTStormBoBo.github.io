@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ui-Ux on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </title>
+    <link>http://localhost:1313/tags/ui-ux/</link>
+    <description>Recent content in Ui-Ux on Kiến Thức - Kinh Nghiệm - Trải Nghiệm </description>
+    <generator>Hugo</generator>
+    <language>vihug</language>
+    <atom:link href="http://localhost:1313/tags/ui-ux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design Philosophy Behind Kawaii</title>
+      <link>http://localhost:1313/posts/design-philosophy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/design-philosophy/</guid>
+      <description>&lt;p&gt;Creating the &lt;strong&gt;Kawaii&lt;/strong&gt; theme wasn&amp;rsquo;t just about making something that looks good - it was about crafting an experience that feels delightful, modern, and accessible to everyone.&lt;/p&gt;&#xA;&lt;h2 id=&#34;core-principles&#34;&gt;Core Principles&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-simplicity-first&#34;&gt;1. Simplicity First&lt;/h3&gt;&#xA;&lt;p&gt;We believe that the best designs are often the simplest ones. Kawaii embraces:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Clean layouts&lt;/strong&gt; with plenty of whitespace&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Minimal cognitive load&lt;/strong&gt; for readers&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Intuitive navigation&lt;/strong&gt; that doesn&amp;rsquo;t require explanation&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Focus on content&lt;/strong&gt; without distracting elements&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-delightful-interactions&#34;&gt;2. Delightful Interactions&lt;/h3&gt;&#xA;&lt;p&gt;Small details make a big difference:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
