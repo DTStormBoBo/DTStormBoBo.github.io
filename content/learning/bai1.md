@@ -28,7 +28,7 @@ Chào mừng đến với học phần **Lập trình Mạng máy tính (CMP180)
 * **Buổi 7-8:** Đa tuyến (Multithreading), Multicast UDP & Java RMI.
 * **Buổi 9-10:** Báo cáo đồ án học phần.
 
-![Sơ đồ lộ trình 10 buổi học](timeline-course-roadmap.jpg)
+![Sơ đồ lộ trình 10 buổi học](Images/timeline-course-roadmap.jpg)
 
 ### 2. Phương pháp học tập mới: AI Mentor & Tư duy phản biện
 Điểm đặc biệt của khóa học là cách tiếp cận "Học cùng AI" nhưng không phụ thuộc vào AI.
@@ -37,7 +37,6 @@ Chào mừng đến với học phần **Lập trình Mạng máy tính (CMP180)
 * <!-- cite --><!-- refs: 85-90 --> **Hiệu ứng Dunning-Kruger:** Nhận thức rõ mình đang ở đâu để kiên trì phát triển.
 * <!-- cite --><!-- refs: 211-216 --> **5 Kỹ năng tư duy phản biện (Critical Thinking):** Phân tích, Đánh giá, Suy luận, Giải quyết vấn đề, Giao tiếp.
 
-![Biểu đồ hiệu ứng Dunning-Kruger trong học tập](dunning-kruger-chart.jpg)
 
 ### 3. Đánh giá & Quy tắc lớp học
 * <!-- cite --><!-- refs: 76-80 --> **Điểm số:** 50% Quá trình (Chuyên cần, Check-in, Thuyết trình) + 50% Cuối kỳ (Đồ án cá nhân).
