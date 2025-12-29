@@ -8,8 +8,6 @@ summary: "GIỚI THIỆU HỌC PHẦN."
 ---
 
 
-![Banner giới thiệu Lập trình Mạng máy tính](Images/banner-intro-network-programming.jpg)
-
 ## Giới thiệu
 Chào mừng đến với học phần **Lập trình Mạng máy tính (CMP180)**. <!-- cite --><!-- refs: 17,19,20 -->
 
