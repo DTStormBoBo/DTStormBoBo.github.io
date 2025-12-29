@@ -70,7 +70,7 @@ Chào mừng đến với học phần **Lập trình Mạng máy tính (CMP180)
 4.  **Nhiệm vụ (Task):** Việc cần làm cụ thể.
 5.  **Nghi thức (Format):** Định dạng đầu ra.
 
-![Sơ đồ Quy tắc 5N trong Prompt Engineering](photos/5n-prompt-rule.jpg)
+![Sơ đồ Quy tắc 5N trong Prompt Engineering](Images/5n-prompt-rule.jpg)
 
 ## Tài liệu tham khảo
 <!-- Tham khảo chi tiết được giữ riêng trong tài liệu khóa học / syllabus. -->
