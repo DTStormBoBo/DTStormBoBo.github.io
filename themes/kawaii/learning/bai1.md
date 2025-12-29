@@ -7,8 +7,6 @@ tags: ["Java", "Network Programming", "AI Learning", "HUTECH"]
 categories: ["Bài giảng", "Lập trình mạng"]
 ---
 
-![Banner giới thiệu Lập trình Mạng máy tính](banner-intro-network-programming.jpg)
-
 ## Giới thiệu
 Chào mừng đến với học phần **Lập trình Mạng máy tính (CMP180)**. <!-- cite --><!-- refs: 17,19,20 -->
 
